@@ -3,919 +3,945 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>LE CHEF — 파인다이닝</title>
+<title>LE CHEF — Fine Dining, Hannam</title>
 <meta name="description" content="접시 위에 담긴 계절의 이야기. 서울 한남동 프렌치 파인다이닝, 르쉐프.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 <meta property="og:type" content="website">
-<meta property="og:title" content="LE CHEF — 파인다이닝">
+<meta property="og:title" content="LE CHEF — Fine Dining">
 <meta property="og:description" content="접시 위에 담긴 계절의 이야기. 서울 한남동 프렌치 파인다이닝.">
 <meta property="og:url" content="https://dongboweb-lechef.vercel.app">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Restaurant","name":"LE CHEF 르쉐프","servesCuisine":"French","priceRange":"$$$$","address":{"@type":"PostalAddress","streetAddress":"한남동 00-00","addressLocality":"용산구","addressRegion":"서울특별시","addressCountry":"KR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"18:00","closes":"23:00"}]}
+{"@context":"https://schema.org","@type":"Restaurant","name":"LE CHEF","servesCuisine":"French","priceRange":"$$$$","telephone":"+82-2-000-0000","address":{"@type":"PostalAddress","streetAddress":"한남동 00-00","addressLocality":"용산구","addressRegion":"서울특별시","addressCountry":"KR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"18:00","closes":"23:00"}]}
 </script>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0b0f'/><text y='.78em' x='50' text-anchor='middle' font-size='40' font-family='serif' fill='%23c9a96e'>LC</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a07840'/><text y='.78em' x='50' text-anchor='middle' font-size='38' font-family='serif' fill='%23fff'>LC</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Sans+KR:wght@200;300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Sans+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
-<style>.ld{display:none!important}.pane{opacity:1!important;transform:none!important;clip-path:none!important}</style>
-</noscript>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&family=Noto+Sans+KR:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
-/* ===== ROOT ===== */
+
+/* ================================================================
+   RESET
+   ================================================================ */
 *{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#0a0b0f;--bg2:#12131a;--bg3:#1a1c26;
-  --ivory:#f5f0e8;--ivory2:#e8e0d4;--ivory3:#d4c9b8;
-  --gold:#c9a96e;--gold-dark:#a68b50;--gold-light:#e0d4b8;
-  --fg:#f5f0e8;--fg2:#c4bdb3;--fg3:#8a8580;
-  --dim:#5a5550;--dim2:#3a3835;
-  --border:rgba(245,240,232,.06);--border2:rgba(245,240,232,.1);
-  --display:'Instrument Serif',Georgia,serif;
-  --sans:'DM Sans','Noto Sans KR',sans-serif;
-  --body:'Noto Sans KR','DM Sans',sans-serif;
-  --ease:cubic-bezier(.16,1,.3,1);--ease-slow:cubic-bezier(.25,.46,.45,.94);
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans','Noto Sans KR',sans-serif;
+  background:#a07840;
+  color:#fff;
+  font-weight:300;
+  font-size:14px;
+  line-height:1.8;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  word-break:keep-all;
+  overflow-wrap:break-word;
 }
-html{scroll-behavior:auto;cursor:none;scroll-snap-type:y mandatory;overflow-x:hidden}
-body{font-family:var(--body);background:var(--bg);color:var(--fg);overflow-x:hidden;font-weight:300;cursor:none;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
-::selection{background:var(--gold);color:var(--bg)}
-a,button{cursor:none}::-webkit-scrollbar{width:0;display:none}
+a{color:#fff;text-decoration:none;transition:color .3s}
+a:hover{color:#e4c48d}
+img{max-width:100%;display:block}
+button{border:none;background:none;cursor:pointer;font-family:inherit;color:inherit}
+::selection{background:#fff;color:#a07840}
+::-webkit-scrollbar{width:0}
 
-/* ===== LOADER ===== */
-.ld{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 1.2s var(--ease)}
-.ld.done{opacity:0;pointer-events:none}
-.ld-brand{font-family:var(--display);font-size:clamp(2rem,5vw,3.2rem);color:var(--gold);letter-spacing:.25em;opacity:0;animation:ldIn .8s .4s var(--ease) forwards}
-.ld-sub{font-family:var(--sans);font-size:.38rem;color:var(--dim);letter-spacing:.5em;text-transform:uppercase;margin-top:14px;opacity:0;animation:ldIn .6s .8s var(--ease) forwards}
-.ld-line{width:0;height:1px;background:var(--gold);margin-top:24px;animation:ldW 1.4s .6s var(--ease) forwards}
-@keyframes ldIn{to{opacity:1}}
-@keyframes ldW{to{width:100px}}
+/* ================================================================
+   HEADER — overlap style
+   ================================================================ */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:28px 48px;
+  display:flex;justify-content:space-between;align-items:center;
+  transition:background .4s,padding .4s;
+}
+.header.scrolled{
+  background:rgba(140,105,55,.95);
+  backdrop-filter:blur(8px);
+  padding:16px 48px;
+}
+.header-logo{
+  font-family:'Instrument Serif',serif;
+  font-size:1.4rem;
+  letter-spacing:.12em;
+  font-weight:400;
+}
+.header-nav{display:flex;align-items:center;gap:32px}
+.header-link{
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:400;
+  opacity:.7;
+  transition:opacity .3s;
+}
+.header-link:hover,.header-link.active{opacity:1}
+.header-cta{
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:10px 24px;
+  border:1px solid rgba(255,255,255,.3);
+  transition:all .3s;
+}
+.header-cta:hover{
+  background:#fff;
+  color:#a07840;
+  border-color:#fff;
+}
 
-/* ===== CURSOR ===== */
-.cur{position:fixed;width:5px;height:5px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:10000;mix-blend-mode:difference;transition:width .35s var(--ease),height .35s var(--ease)}
-.cur.big{width:12px;height:12px}
-.cur-ring{position:fixed;width:36px;height:36px;border-radius:50%;border:1px solid rgba(201,169,110,.1);pointer-events:none;z-index:9999;transition:all .45s var(--ease)}
-.cur-ring.hover{width:90px;height:90px;border-color:rgba(201,169,110,.2);background:rgba(201,169,110,.02)}
-.cur-ring.nav-hover{width:50px;height:50px;border-color:rgba(201,169,110,.15)}
-.cur-label{position:fixed;pointer-events:none;z-index:10001;font-family:var(--sans);font-size:.42rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;opacity:0;transition:opacity .3s;font-weight:400}
-.cur-label.show{opacity:1}
+/* Hamburger (mobile) */
+.hbg{display:none;flex-direction:column;gap:5px;padding:6px}
+.hbg span{width:20px;height:1px;background:#fff;display:block;transition:all .4s}
+.hbg.open span:nth-child(1){transform:rotate(45deg) translate(2px,2px)}
+.hbg.open span:nth-child(2){opacity:0}
+.hbg.open span:nth-child(3){transform:rotate(-45deg) translate(2px,-2px)}
 
-/* ===== SCROLL PROGRESS ===== */
-.scroll-bar{position:fixed;top:0;left:0;width:100%;height:1px;z-index:9990;background:var(--gold);transform-origin:left;transform:scaleX(0);will-change:transform;opacity:.5}
+/* Mobile menu */
+.mob-menu{
+  position:fixed;inset:0;z-index:99;
+  background:#a07840;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;
+  opacity:0;pointer-events:none;transition:opacity .4s;
+}
+.mob-menu.open{opacity:1;pointer-events:auto}
+.mob-menu a{
+  font-family:'Instrument Serif',serif;
+  font-size:1.6rem;
+  letter-spacing:.08em;
+  opacity:0;transform:translateY(12px);
+  transition:all .4s;
+}
+.mob-menu.open a{opacity:1;transform:none}
+.mob-menu.open a:nth-child(1){transition-delay:.05s}
+.mob-menu.open a:nth-child(2){transition-delay:.1s}
+.mob-menu.open a:nth-child(3){transition-delay:.15s}
+.mob-menu.open a:nth-child(4){transition-delay:.2s}
+.mob-menu.open a:nth-child(5){transition-delay:.25s}
+.mob-menu.open a:nth-child(6){transition-delay:.3s}
 
-/* ===== PANE (fullscreen snap section) ===== */
-.pane{min-height:100vh;min-height:100dvh;scroll-snap-align:start;position:relative;display:flex;overflow:hidden}
+/* ================================================================
+   HERO — large text, minimal
+   ================================================================ */
+.hero{
+  min-height:100vh;min-height:100dvh;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;
+  padding:120px 48px 80px;
+  position:relative;
+}
+.hero-title{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2.4rem,6vw,4.8rem);
+  font-weight:400;
+  line-height:1.2;
+  letter-spacing:.04em;
+  margin-bottom:32px;
+}
+.hero-title em{font-style:italic;opacity:.6}
+.hero-sub{
+  font-size:13px;
+  color:rgba(255,255,255,.6);
+  letter-spacing:.08em;
+  max-width:400px;
+  margin:0 auto 40px;
+  line-height:2;
+}
+.hero-info{
+  font-size:12px;
+  color:rgba(255,255,255,.5);
+  letter-spacing:.06em;
+  line-height:2.4;
+  margin-bottom:32px;
+}
+.hero-reserve{
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  padding:14px 40px;
+  border:1px solid rgba(255,255,255,.35);
+  transition:all .3s;
+  display:inline-block;
+}
+.hero-reserve:hover{background:#fff;color:#a07840;border-color:#fff}
+.hero-scroll{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+}
 
-/* ===== HAMBURGER CIRCLE ===== */
-.menu-btn{position:fixed;top:28px;right:28px;z-index:500;width:52px;height:52px;border-radius:50%;border:1px solid var(--border2);background:rgba(10,11,15,.6);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;transition:all .5s var(--ease)}
-.menu-btn:hover{border-color:var(--gold);background:rgba(201,169,110,.06)}
-.menu-btn s{width:18px;height:1px;background:var(--ivory);display:block;transition:all .5s var(--ease);transform-origin:center;text-decoration:none}
-.menu-btn.open s:nth-child(1){transform:rotate(45deg) translate(1.8px,1.8px)}
-.menu-btn.open s:nth-child(2){opacity:0;transform:scaleX(0)}
-.menu-btn.open s:nth-child(3){transform:rotate(-45deg) translate(1.8px,-1.8px)}
-.menu-btn.open{background:transparent;border-color:var(--ivory)}
+/* ================================================================
+   SECTION — common
+   ================================================================ */
+.section{padding:120px 48px;max-width:1100px;margin:0 auto}
+.section-wide{padding:120px 0;max-width:none}
 
-/* logo */
-.logo{position:fixed;top:32px;left:48px;z-index:500;font-family:var(--display);font-size:.9rem;color:var(--gold);text-decoration:none;letter-spacing:.2em;transition:opacity .4s}
+.sec-label{
+  font-size:11px;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.4);
+  margin-bottom:16px;
+}
+.sec-heading{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:400;
+  letter-spacing:.02em;
+  margin-bottom:20px;
+  line-height:1.3;
+}
+.sec-body{
+  font-size:13px;
+  color:rgba(255,255,255,.55);
+  line-height:2.2;
+  max-width:520px;
+}
+.sec-divider{
+  width:40px;height:1px;
+  background:rgba(255,255,255,.2);
+  margin:60px 0;
+}
 
-/* ===== FULLSCREEN OVERLAY MENU ===== */
-.fs{position:fixed;inset:0;z-index:400;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .6s var(--ease)}
-.fs.open{opacity:1;pointer-events:auto}
-.fs::before{content:'LE CHEF';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--display);font-size:clamp(4rem,14vw,10rem);color:var(--bg2);letter-spacing:.15em;pointer-events:none;white-space:nowrap}
-.fs-link{font-family:var(--display);font-size:clamp(1.6rem,4.5vw,2.8rem);color:var(--fg);text-decoration:none;letter-spacing:.06em;padding:10px 0;opacity:0;transform:translateY(18px);transition:all .5s var(--ease);position:relative}
-.fs-link:hover{color:var(--gold)}
-.fs.open .fs-link{opacity:1;transform:none}
-.fs.open .fs-link:nth-child(1){transition-delay:.1s}
-.fs.open .fs-link:nth-child(2){transition-delay:.15s}
-.fs.open .fs-link:nth-child(3){transition-delay:.2s}
-.fs.open .fs-link:nth-child(4){transition-delay:.25s}
-.fs.open .fs-link:nth-child(5){transition-delay:.3s}
-.fs.open .fs-link:nth-child(6){transition-delay:.35s}
-.fs.open .fs-link:nth-child(7){transition-delay:.4s}
-.fs.open .fs-link:nth-child(8){transition-delay:.45s}
-.fs-cta{display:inline-block;font-size:.55rem;padding:14px 36px;background:var(--gold);color:var(--bg);text-decoration:none;letter-spacing:.14em;text-transform:uppercase;margin-top:28px;opacity:0;transform:translateY(14px);transition:all .5s .45s var(--ease)}
-.fs.open .fs-cta{opacity:1;transform:none}
-.fs-cta:hover{background:var(--gold-dark)}
+/* ================================================================
+   ABOUT — text only, centered
+   ================================================================ */
+.about{text-align:center}
+.about .sec-body{margin:0 auto}
 
-/* ===== PANE 1: HERO ===== */
-.hero{align-items:flex-end;padding:0 48px 10vh}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0a0b0f,#16131a,#0f1520);z-index:0}
-.hero-grad{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 30%,rgba(201,169,110,.06),transparent 50%);z-index:1}
-.hero-bottom{position:absolute;inset:0;background:linear-gradient(to top,var(--bg),transparent 50%);z-index:2}
-.hero-grain{position:absolute;inset:0;z-index:3;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;pointer-events:none}
-.hero-content{position:relative;z-index:4;max-width:900px}
-.hero-over{font-family:var(--sans);font-size:.38rem;letter-spacing:.6em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:flex;align-items:center;gap:14px;opacity:0;animation:hu 1s .5s var(--ease) forwards;white-space:nowrap}
-.hero-over::before{content:'';width:40px;height:1px;background:var(--gold)}
-.hero-title{font-family:var(--display);font-size:clamp(3rem,8vw,7rem);font-weight:400;line-height:1.05;letter-spacing:-.02em;margin-bottom:28px;opacity:0;animation:hu 1s .7s var(--ease) forwards}
-.hero-title em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:.82rem;color:var(--fg3);line-height:2.2;font-weight:200;max-width:480px;opacity:0;animation:hu 1s .9s var(--ease) forwards}
-.hero-ctas{display:flex;gap:14px;margin-top:36px;opacity:0;animation:hu 1s 1.1s var(--ease) forwards}
-.hero-btn{font-family:var(--sans);font-size:.48rem;padding:15px 34px;text-decoration:none;letter-spacing:.14em;text-transform:uppercase;font-weight:400;transition:all .5s var(--ease)}
-.hero-btn-fill{background:var(--gold);color:var(--bg);border:1px solid var(--gold)}
-.hero-btn-fill:hover{background:var(--gold-dark);border-color:var(--gold-dark);transform:translateY(-3px)}
-.hero-btn-ghost{background:transparent;color:var(--fg);border:1px solid var(--border2)}
-.hero-btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-@keyframes hu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
-.hero-scroll{position:absolute;bottom:28px;right:48px;z-index:4;display:flex;align-items:center;gap:10px;opacity:0;animation:hu 1s 1.5s var(--ease) forwards}
-.hero-scroll span{font-family:var(--sans);font-size:.32rem;letter-spacing:.35em;text-transform:uppercase;color:var(--dim)}
-.scroll-anim{width:1px;height:32px;position:relative;overflow:hidden}
-.scroll-anim::after{content:'';position:absolute;top:-100%;left:0;width:1px;height:100%;background:var(--gold);animation:sa 2s infinite var(--ease-slow)}
-@keyframes sa{0%{top:-100%}100%{top:100%}}
+/* ================================================================
+   PHOTO BAND — full-width image
+   ================================================================ */
+.photo-band{
+  width:100%;
+  aspect-ratio:21/9;
+  max-height:480px;
+  overflow:hidden;
+  position:relative;
+}
+.photo-band-inner{
+  width:100%;height:100%;
+  background:linear-gradient(135deg,#8a6a35,#6a5028);
+  display:flex;align-items:center;justify-content:center;
+}
+.photo-band-ph svg{
+  width:48px;height:48px;
+  fill:none;stroke:rgba(255,255,255,.12);stroke-width:.6;
+}
 
-/* ===== PANE 2: PHILOSOPHY (타이포 중심) ===== */
-.pane-philo{align-items:center;justify-content:center;text-align:center;padding:0 48px;background:var(--bg)}
-.philo-big{font-family:var(--display);font-size:clamp(1.6rem,4.5vw,3.6rem);font-weight:400;line-height:1.6;max-width:800px;font-style:italic;color:var(--fg2)}
-.philo-big em{color:var(--gold);font-style:normal}
-.philo-line{width:60px;height:1px;background:var(--gold);margin:32px auto;opacity:.4}
-.philo-sub{font-family:var(--sans);font-size:.4rem;letter-spacing:.4em;text-transform:uppercase;color:var(--dim)}
+/* ================================================================
+   MENU — clean list
+   ================================================================ */
+.menu-list{margin-top:48px}
+.menu-cat{
+  font-size:11px;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.35);
+  padding:20px 0 12px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.menu-item{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:16px 0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.menu-name{
+  font-family:'Instrument Serif',serif;
+  font-size:1rem;
+  font-weight:400;
+}
+.menu-name-en{
+  display:block;
+  font-family:'DM Sans',sans-serif;
+  font-size:11px;
+  color:rgba(255,255,255,.35);
+  letter-spacing:.06em;
+  margin-top:2px;
+  font-style:normal;
+  white-space:nowrap;
+}
+.menu-desc{
+  font-size:12px;
+  color:rgba(255,255,255,.4);
+  flex:1;
+  margin:0 24px;
+}
+.menu-price{
+  font-family:'Instrument Serif',serif;
+  font-size:.95rem;
+  white-space:nowrap;
+  color:rgba(255,255,255,.7);
+}
+.menu-note{
+  font-size:12px;
+  color:rgba(255,255,255,.3);
+  margin-top:32px;
+  letter-spacing:.04em;
+}
 
-/* ===== PANE 3: ABOUT (이미지 풀블리드 + 오버레이) ===== */
-.pane-about{align-items:center;justify-content:flex-start;padding:0 48px}
-.about-bg{position:absolute;inset:0;background:linear-gradient(135deg,#1a1510,#2a2018,#1a1a20);z-index:0}
-.about-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(10,11,15,.5) 50%,transparent 100%);z-index:1}
-.about-content{position:relative;z-index:2;max-width:520px;padding:80px 0}
-.about-label{font-family:var(--sans);font-size:.36rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.about-label::before{content:'';width:20px;height:1px;background:var(--gold)}
-.about-title{font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;line-height:1.4;margin-bottom:20px}
-.about-title em{font-style:italic;color:var(--gold)}
-.about-body{font-size:.78rem;color:var(--fg3);line-height:2.4;font-weight:200;margin-bottom:36px}
-.about-stats{display:flex;gap:48px}
-.a-stat{text-align:left}
-.a-stat-num{font-family:var(--display);font-size:clamp(2rem,4vw,3rem);color:var(--gold);display:block;line-height:1}
-.a-stat-label{font-family:var(--sans);font-size:.34rem;color:var(--dim);letter-spacing:.14em;text-transform:uppercase;margin-top:4px;white-space:nowrap}
+/* ================================================================
+   GALLERY — large photos, 2-col
+   ================================================================ */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4px;
+  margin-top:48px;
+}
+.gallery-item{
+  position:relative;
+  aspect-ratio:4/3;
+  overflow:hidden;
+}
+.gallery-item-inner{
+  width:100%;height:100%;
+  transition:transform .6s ease;
+  display:flex;align-items:center;justify-content:center;
+}
+.gallery-item:hover .gallery-item-inner{transform:scale(1.03)}
+.gi1 .gallery-item-inner{background:linear-gradient(135deg,#7a5a28,#6a4a20)}
+.gi2 .gallery-item-inner{background:linear-gradient(135deg,#6a5a38,#5a4a28)}
+.gi3 .gallery-item-inner{background:linear-gradient(135deg,#8a6a30,#7a5a28)}
+.gi4 .gallery-item-inner{background:linear-gradient(135deg,#5a4a30,#6a5838)}
+.gi5 .gallery-item-inner{background:linear-gradient(135deg,#7a6a38,#6a5a30)}
+.gi6 .gallery-item-inner{background:linear-gradient(135deg,#6a5028,#8a6a35)}
+.gi7 .gallery-item-inner{background:linear-gradient(135deg,#8a7040,#7a5a28)}
+.gi8 .gallery-item-inner{background:linear-gradient(135deg,#6a5a30,#5a4820)}
+.gallery-item-ph svg{
+  width:36px;height:36px;
+  fill:none;stroke:rgba(255,255,255,.1);stroke-width:.6;
+}
+.gallery-item-wide{grid-column:1/3;aspect-ratio:21/9}
+.gallery-cap{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:16px 20px;
+  background:linear-gradient(transparent,rgba(0,0,0,.4));
+  font-family:'Instrument Serif',serif;
+  font-size:13px;
+  font-style:italic;
+  color:rgba(255,255,255,.7);
+  opacity:0;transition:opacity .4s;
+}
+.gallery-item:hover .gallery-cap{opacity:1}
 
-/* ===== PANE 4: MENU (다크 배경, 세로 나열) ===== */
-.pane-menu{flex-direction:column;align-items:center;justify-content:center;padding:60px 48px;background:var(--bg2)}
-.menu-label{font-family:var(--sans);font-size:.36rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.menu-title{font-family:var(--display);font-size:clamp(1.4rem,3vw,2.2rem);text-align:center;margin-bottom:40px}
-.menu-list{display:flex;flex-direction:column;gap:0;width:100%;max-width:600px}
-.menu-item{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--border);transition:all .4s var(--ease)}
-.menu-item:hover{padding-left:8px}
-.menu-item:hover .mi-name{color:var(--gold)}
-.mi-num{font-family:var(--display);font-size:.7rem;color:var(--dim);width:28px;flex-shrink:0;font-style:italic}
-.mi-name{font-family:var(--display);font-size:1rem;flex:1;transition:color .4s}
-.mi-name small{display:block;font-family:var(--sans);font-size:.32rem;color:var(--dim);letter-spacing:.12em;text-transform:uppercase;margin-top:2px;font-style:normal;white-space:nowrap}
-.mi-dots{flex:1;border-bottom:1px dotted var(--dim2);margin:0 12px;min-width:20px;align-self:center}
-.mi-price{font-family:var(--display);font-size:.85rem;color:var(--gold);flex-shrink:0;white-space:nowrap}
-.menu-foot{font-family:var(--sans);font-size:.44rem;color:var(--dim);text-align:center;margin-top:28px;letter-spacing:.06em}
+/* ================================================================
+   LIGHTBOX
+   ================================================================ */
+.lb{
+  position:fixed;inset:0;z-index:200;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .4s;
+}
+.lb.open{opacity:1;pointer-events:auto}
+.lb-bg{position:absolute;inset:0;background:rgba(60,40,15,.94)}
+.lb-inner{
+  position:relative;z-index:1;
+  width:80vw;max-width:900px;height:70vh;
+  background:#6a5028;background-size:cover;background-position:center;
+  display:flex;align-items:center;justify-content:center;
+  transform:scale(.95);transition:transform .5s ease;
+}
+.lb.open .lb-inner{transform:scale(1)}
+.lb-close{
+  position:absolute;top:20px;right:20px;z-index:2;
+  font-size:1.2rem;color:rgba(255,255,255,.5);
+  transition:color .3s;
+}
+.lb-close:hover{color:#fff}
+.lb-nav{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+  font-size:.9rem;color:rgba(255,255,255,.4);
+  transition:color .3s;
+}
+.lb-nav:hover{color:#fff}
+.lb-prev{left:20px}.lb-next{right:20px}
+.lb-counter{
+  position:absolute;bottom:20px;left:20px;z-index:2;
+  font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.1em;
+}
+.lb-caption{
+  position:absolute;bottom:20px;right:20px;z-index:2;
+  font-family:'Instrument Serif',serif;
+  font-size:13px;color:rgba(255,255,255,.4);
+  font-style:italic;
+}
 
-/* ===== PANE 5: GALLERY — FULLSCREEN SLIDESHOW ===== */
-.pane-gallery{align-items:center;justify-content:center;background:var(--bg)}
-.gal-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s var(--ease);display:flex;align-items:center;justify-content:center}
-.gal-slide.active{opacity:1}
-.gal-slide-bg{position:absolute;inset:0;transition:transform 6s linear}
-.gal-slide.active .gal-slide-bg{transform:scale(1.04)}
-.gs1 .gal-slide-bg{background:linear-gradient(135deg,#1a1510,#2a2018)}
-.gs2 .gal-slide-bg{background:linear-gradient(135deg,#12161e,#1e2a36)}
-.gs3 .gal-slide-bg{background:linear-gradient(135deg,#1e1818,#2e2422)}
-.gs4 .gal-slide-bg{background:linear-gradient(135deg,#14180e,#222e1a)}
-.gs5 .gal-slide-bg{background:linear-gradient(135deg,#1a1420,#2a2030)}
-.gs6 .gal-slide-bg{background:linear-gradient(135deg,#181a10,#2a2c1a)}
-.gs7 .gal-slide-bg{background:linear-gradient(135deg,#1a1210,#2e2218)}
-.gs8 .gal-slide-bg{background:linear-gradient(135deg,#101418,#1e2228)}
-.gal-slide-overlay{position:absolute;inset:0;background:rgba(10,11,15,.35)}
-.gal-slide-ph{position:relative;z-index:1}
-.gal-slide-ph svg{width:64px;height:64px;fill:none;stroke:rgba(201,169,110,.12);stroke-width:.5}
-.gal-ui{position:absolute;inset:0;z-index:2;pointer-events:none}
-.gal-counter{position:absolute;top:50%;right:48px;transform:translateY(-50%);font-family:var(--display);font-size:.44rem;color:rgba(245,240,232,.15);letter-spacing:.12em;writing-mode:vertical-rl}
-.gal-cap{position:absolute;bottom:48px;left:48px;font-family:var(--display);font-size:clamp(1.2rem,2.5vw,2rem);color:var(--fg);font-style:italic;opacity:0;transform:translateY(12px);transition:all .6s .3s var(--ease)}
-.gal-slide.active~.gal-ui .gal-cap,.pane-gallery .gal-slide.active~.gal-ui .gal-cap{opacity:1;transform:none}
-.gal-cap-sub{display:block;font-family:var(--sans);font-size:.32rem;color:var(--dim);letter-spacing:.16em;text-transform:uppercase;margin-top:4px;font-style:normal}
-.gal-arrows{position:absolute;bottom:48px;right:48px;display:flex;gap:8px;pointer-events:auto}
-.gal-arrow{width:42px;height:42px;border-radius:50%;border:1px solid var(--border2);background:transparent;color:var(--fg3);font-size:.7rem;display:flex;align-items:center;justify-content:center;transition:all .4s var(--ease)}
-.gal-arrow:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,169,110,.05)}
-.gal-dots{position:absolute;bottom:48px;left:50%;transform:translateX(-50%);display:flex;gap:8px;pointer-events:auto}
-.gal-dot{width:20px;height:2px;background:var(--dim2);border:none;padding:0;transition:all .4s var(--ease);cursor:pointer}
-.gal-dot.active{background:var(--gold);width:36px}
+/* ================================================================
+   CHEF — minimal cards
+   ================================================================ */
+.chef-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:4px;
+  margin-top:48px;
+}
+.chef-card{
+  position:relative;
+  overflow:hidden;
+}
+.chef-photo{
+  aspect-ratio:3/4;
+  overflow:hidden;
+}
+.chef-photo-inner{
+  width:100%;height:100%;
+  transition:transform .6s ease;
+  display:flex;align-items:center;justify-content:center;
+}
+.chef-card:hover .chef-photo-inner{transform:scale(1.03)}
+.cp1 .chef-photo-inner{background:linear-gradient(135deg,#8a6a35,#7a5a28)}
+.cp2 .chef-photo-inner{background:linear-gradient(135deg,#7a6a38,#6a5a30)}
+.cp3 .chef-photo-inner{background:linear-gradient(135deg,#6a5028,#8a6a35)}
+.chef-photo-ph svg{
+  width:32px;height:32px;
+  fill:none;stroke:rgba(255,255,255,.1);stroke-width:.6;
+}
+.chef-info{padding:20px 4px}
+.chef-info h3{
+  font-family:'Instrument Serif',serif;
+  font-size:1rem;font-weight:400;
+  margin-bottom:2px;
+}
+.chef-role{
+  font-size:11px;
+  color:rgba(255,255,255,.4);
+  letter-spacing:.1em;
+}
 
-/* ===== PANE 6: QUOTE (거대 인용문) ===== */
-.pane-quote{align-items:center;justify-content:center;text-align:center;padding:0 48px;background:var(--bg)}
-.pane-quote::before{content:'\201C';position:absolute;top:50%;left:50%;transform:translate(-50%,-65%);font-family:var(--display);font-size:clamp(15rem,30vw,30rem);color:var(--bg2);line-height:1;pointer-events:none}
-.quote-content{position:relative;z-index:1;max-width:700px}
-.quote-text{font-family:var(--display);font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:400;font-style:italic;line-height:2;color:var(--fg2);margin-bottom:28px}
-.quote-who{font-family:var(--sans);font-size:.44rem;color:var(--dim);letter-spacing:.14em}
-.quote-stars{color:var(--gold);font-size:.5rem;letter-spacing:6px;margin-bottom:20px;opacity:.5}
-.quote-item{display:none}
-.quote-item.active{display:block}
-.quote-nav{display:flex;gap:8px;margin-top:28px;justify-content:center}
-.quote-nav-dot{width:24px;height:2px;background:var(--dim2);border:none;padding:0;transition:all .4s var(--ease);cursor:pointer}
-.quote-nav-dot.active{background:var(--gold);width:36px}
+/* ================================================================
+   WINE — simple list
+   ================================================================ */
+.wine-list{margin-top:48px}
+.wine-item{
+  padding:20px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  display:flex;justify-content:space-between;align-items:baseline;
+}
+.wine-name{
+  font-family:'Instrument Serif',serif;
+  font-size:1rem;
+}
+.wine-detail{
+  font-size:12px;
+  color:rgba(255,255,255,.35);
+  margin-top:2px;
+  white-space:nowrap;
+}
+.wine-price{
+  font-family:'Instrument Serif',serif;
+  font-size:.9rem;
+  color:rgba(255,255,255,.6);
+  white-space:nowrap;
+}
 
-/* ===== PANE: SEASONAL HIGHLIGHT ===== */
-.pane-season{flex-direction:column;align-items:center;justify-content:center;padding:80px 48px;background:var(--bg);position:relative;text-align:center}
-.pane-season::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(201,169,110,.04),transparent 60%);pointer-events:none}
-.season-label{font-family:var(--sans);font-size:.36rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:10px;justify-content:center}
-.season-label::before,.season-label::after{content:'';width:20px;height:1px;background:var(--gold)}
-.season-title{font-family:var(--display);font-size:clamp(1.4rem,3vw,2.2rem);margin-bottom:12px}
-.season-title em{font-style:italic;color:var(--gold)}
-.season-desc{font-size:.78rem;color:var(--fg3);line-height:2.4;font-weight:200;max-width:560px;margin:0 auto 40px}
-.season-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);width:100%;max-width:800px}
-.season-cell{background:var(--bg);padding:28px 20px;text-align:center;transition:all .5s var(--ease)}
-.season-cell:hover{background:var(--bg2)}
-.season-cell-icon{font-size:1.4rem;margin-bottom:12px;opacity:.6}
-.season-cell-name{font-family:var(--display);font-size:.8rem;margin-bottom:6px}
-.season-cell-detail{font-family:var(--sans);font-size:.34rem;color:var(--dim);letter-spacing:.08em;line-height:1.8}
+/* ================================================================
+   INFO — clean grid
+   ================================================================ */
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:48px;
+  margin-top:48px;
+}
+.info-col h4{
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.4);
+  margin-bottom:12px;
+  font-weight:400;
+}
+.info-col p{
+  font-size:13px;
+  color:rgba(255,255,255,.6);
+  line-height:2.2;
+}
+.info-btns{display:flex;gap:8px;margin-top:20px}
+.info-btn{
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:10px 22px;
+  border:1px solid rgba(255,255,255,.25);
+  transition:all .3s;
+}
+.info-btn:hover{background:#fff;color:#a07840;border-color:#fff}
+.info-btn-fill{background:#fff;color:#a07840;border:1px solid #fff}
+.info-btn-fill:hover{background:transparent;color:#fff}
 
-/* ===== PANE 7: INFO (다크) ===== */
-.pane-info{flex-direction:column;align-items:center;justify-content:center;padding:60px 48px;background:var(--bg2)}
-.info-label{font-family:var(--sans);font-size:.36rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.info-title{font-family:var(--display);font-size:clamp(1.4rem,3vw,2.2rem);margin-bottom:48px;text-align:center}
-.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);width:100%;max-width:900px}
-.info-cell{background:var(--bg2);padding:36px 28px;text-align:center}
-.info-cell h4{font-family:var(--display);font-size:.82rem;margin-bottom:10px}
-.info-cell p{font-size:.7rem;color:var(--fg3);line-height:2.2;font-weight:200}
-.info-btns{display:flex;gap:10px;margin-top:36px}
-.info-btn{font-family:var(--sans);font-size:.46rem;padding:14px 30px;text-decoration:none;letter-spacing:.12em;text-transform:uppercase;font-weight:400;transition:all .5s var(--ease)}
-.info-btn-fill{background:var(--gold);color:var(--bg);border:1px solid var(--gold)}
-.info-btn-fill:hover{background:var(--gold-dark);transform:translateY(-2px)}
-.info-btn-ghost{background:transparent;color:var(--fg);border:1px solid var(--border2)}
-.info-btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+/* ================================================================
+   FOOTER
+   ================================================================ */
+.footer{
+  padding:40px 48px;
+  border-top:1px solid rgba(255,255,255,.08);
+  display:flex;justify-content:space-between;align-items:center;
+  max-width:1100px;margin:0 auto;
+}
+.footer-logo{
+  font-family:'Instrument Serif',serif;
+  font-size:.9rem;
+  letter-spacing:.15em;
+}
+.footer-copy{font-size:11px;color:rgba(255,255,255,.25);letter-spacing:.06em}
+.footer-links{display:flex;gap:16px}
+.footer-link{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.06em;transition:color .3s}
+.footer-link:hover{color:#fff}
 
-/* ===== FOOTER (not snap) ===== */
-.foot{padding:32px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.foot-logo{font-family:var(--display);font-size:.75rem;color:var(--gold);text-decoration:none;letter-spacing:.18em}
-.foot-copy{font-family:var(--sans);font-size:.34rem;color:var(--dim);letter-spacing:.08em}
-.foot-right{display:flex;gap:14px;align-items:center}
-.foot-link{color:var(--dim);text-decoration:none;font-size:.38rem;letter-spacing:.08em;transition:color .3s}
-.foot-link:hover{color:var(--gold)}
-
-/* ===== PANE: WINE PAIRING ===== */
-.pane-wine{flex-direction:column;align-items:center;justify-content:center;padding:80px 48px;background:var(--bg2);position:relative}
-.pane-wine::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 70%,rgba(140,60,60,.06),transparent 60%);pointer-events:none}
-.wine-label{font-family:var(--sans);font-size:.36rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.wine-label::before{content:'';width:20px;height:1px;background:var(--gold)}
-.wine-title{font-family:var(--display);font-size:clamp(1.4rem,3vw,2.2rem);text-align:center;margin-bottom:12px}
-.wine-title em{font-style:italic;color:var(--gold)}
-.wine-sub{font-family:var(--sans);font-size:.44rem;color:var(--dim);text-align:center;max-width:500px;line-height:2;margin-bottom:48px;font-weight:200}
-.wine-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;width:100%;max-width:960px}
-.wine-card{background:var(--bg);border:1px solid var(--border);padding:36px 28px;position:relative;transition:all .5s var(--ease);overflow:hidden}
-.wine-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0;transition:opacity .5s var(--ease)}
-.wine-card:hover{border-color:var(--border2);transform:translateY(-4px)}
-.wine-card:hover::before{opacity:1}
-.wine-icon{width:48px;height:48px;margin-bottom:20px;opacity:.2}
-.wine-icon svg{width:100%;height:100%;fill:none;stroke:var(--gold);stroke-width:1}
-.wine-type{font-family:var(--sans);font-size:.32rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-.wine-name{font-family:var(--display);font-size:1rem;margin-bottom:12px;line-height:1.4}
-.wine-name em{font-style:italic;color:var(--fg2)}
-.wine-desc{font-size:.7rem;color:var(--fg3);line-height:2.2;font-weight:200;margin-bottom:20px}
-.wine-meta{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--border)}
-.wine-region{font-family:var(--sans);font-size:.34rem;color:var(--dim);letter-spacing:.1em}
-.wine-price{font-family:var(--display);font-size:.85rem;color:var(--gold)}
-.wine-foot{font-family:var(--sans);font-size:.4rem;color:var(--dim);text-align:center;margin-top:36px;letter-spacing:.06em;font-weight:300}
-
-/* ===== PANE: CHEF ===== */
-.pane-chef{flex-direction:column;align-items:center;justify-content:center;padding:80px 48px;background:var(--bg);position:relative}
-.pane-chef::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(201,169,110,.04),transparent 50%);pointer-events:none}
-.chef-label{font-family:var(--sans);font-size:.36rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.chef-label::before{content:'';width:20px;height:1px;background:var(--gold)}
-.chef-title{font-family:var(--display);font-size:clamp(1.4rem,3vw,2.2rem);text-align:center;margin-bottom:12px}
-.chef-title em{font-style:italic;color:var(--gold)}
-.chef-sub{font-family:var(--sans);font-size:.44rem;color:var(--dim);text-align:center;max-width:500px;line-height:2;margin-bottom:48px;font-weight:200}
-.chef-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;width:100%;max-width:960px}
-.chef-card{position:relative;overflow:hidden;transition:all .5s var(--ease)}
-.chef-card:hover{transform:translateY(-4px)}
-.chef-photo{width:100%;aspect-ratio:3/4;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--bg2),var(--bg3))}
-.chef-photo-bg{position:absolute;inset:0;transition:transform .8s var(--ease)}
-.chef-card:hover .chef-photo-bg{transform:scale(1.05)}
-.chef-photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,11,15,.85) 0%,rgba(10,11,15,.2) 40%,transparent 100%);z-index:1}
-.chef-photo-ph{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:0;opacity:.15}
-.chef-photo-ph svg{width:56px;height:56px;fill:none;stroke:var(--gold);stroke-width:.5}
-.chef-quote{position:absolute;bottom:0;left:0;right:0;padding:28px 20px;z-index:2}
-.chef-quote-text{font-family:var(--display);font-size:.72rem;font-style:italic;color:var(--fg2);line-height:1.8;margin-bottom:10px;opacity:0;transform:translateY(10px);transition:all .5s .1s var(--ease)}
-.chef-card:hover .chef-quote-text{opacity:1;transform:none}
-.chef-info{padding:20px 0;text-align:center}
-.chef-name{font-family:var(--display);font-size:.95rem;margin-bottom:4px}
-.chef-role{font-family:var(--sans);font-size:.36rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
-.chef-tags{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
-.chef-tag{font-family:var(--sans);font-size:.3rem;color:var(--dim);letter-spacing:.1em;padding:4px 10px;border:1px solid var(--border);border-radius:20px;transition:all .3s var(--ease);white-space:nowrap}
-.chef-card:hover .chef-tag{border-color:var(--border2)}
-.chf1{background:linear-gradient(135deg,#1e1a16,#2e2820,#1a1614)}
-.chf2{background:linear-gradient(135deg,#161a1e,#202830,#141820)}
-.chf3{background:linear-gradient(135deg,#1a161e,#28202e,#1e1420)}
-
-/* ===== TOAST NOTIFICATION ===== */
-.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%) translateY(30px);z-index:300;background:var(--bg2);border:1px solid var(--border2);padding:18px 28px 18px 24px;display:flex;align-items:center;gap:16px;opacity:0;pointer-events:none;transition:all .6s var(--ease);max-width:420px;width:calc(100% - 40px);backdrop-filter:blur(16px)}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
-.toast-icon{width:36px;height:36px;flex-shrink:0;border-radius:50%;background:rgba(201,169,110,.1);display:flex;align-items:center;justify-content:center}
-.toast-icon svg{width:16px;height:16px;fill:none;stroke:var(--gold);stroke-width:1.5}
-.toast-body{flex:1}
-.toast-title{font-family:var(--sans);font-size:.46rem;color:var(--fg);letter-spacing:.06em;margin-bottom:3px;font-weight:400}
-.toast-msg{font-family:var(--body);font-size:.68rem;color:var(--fg3);line-height:1.8;font-weight:200}
-.toast-close{width:28px;height:28px;border:none;background:transparent;color:var(--dim);font-size:.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:color .3s;padding:0;line-height:1}
-.toast-close:hover{color:var(--fg)}
-.toast-bar{position:absolute;bottom:0;left:0;height:2px;background:var(--gold);transition:width linear}
-
-/* ===== FLOATING ===== */
-.kakao-float{position:fixed;bottom:26px;right:26px;width:48px;height:48px;border-radius:50%;background:#FEE500;display:flex;align-items:center;justify-content:center;text-decoration:none;z-index:90;box-shadow:0 4px 18px rgba(0,0,0,.3);transition:all .5s var(--ease)}
-.kakao-float:hover{transform:translateY(-5px) scale(1.06);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+/* ================================================================
+   FLOATING — KakaoTalk + mobile bar
+   ================================================================ */
+.kakao-float{
+  position:fixed;bottom:28px;right:28px;
+  width:48px;height:48px;border-radius:50%;
+  background:#FEE500;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;z-index:90;
+  box-shadow:0 4px 16px rgba(0,0,0,.15);
+  transition:transform .3s;
+}
+.kakao-float:hover{transform:translateY(-4px)}
 .kakao-float svg{width:22px;height:22px;fill:#3C1E1E}
-.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(10,11,15,.95);backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:10px 16px calc(10px + env(safe-area-inset-bottom));z-index:100}
-.mb-inner{display:flex;gap:8px}
-.mob-bar a{flex:1;text-align:center;padding:12px;text-decoration:none;font-size:.74rem;font-weight:300;letter-spacing:.06em;transition:all .3s}
-.m-line{border:1px solid var(--ivory);color:var(--ivory)}.m-fill{background:var(--gold);color:var(--bg)}
+.mob-bar{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;
+  background:rgba(140,105,55,.95);
+  backdrop-filter:blur(12px);
+  border-top:1px solid rgba(255,255,255,.08);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  z-index:100;
+}
+.mob-bar-inner{display:flex;gap:8px}
+.mob-bar a{
+  flex:1;text-align:center;padding:12px;
+  text-decoration:none;font-size:13px;
+  font-weight:300;letter-spacing:.06em;
+  color:#fff;transition:all .3s;
+}
+.mob-bar .mb-line{border:1px solid rgba(255,255,255,.35)}
+.mob-bar .mb-fill{background:#fff;color:#a07840}
 
-/* ===== PANE REVEAL ===== */
-.pane-reveal{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
-.pane-reveal.visible{opacity:1;transform:none}
+.back-top{
+  position:fixed;bottom:28px;left:28px;
+  width:36px;height:36px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.35);font-size:14px;
+  z-index:90;opacity:0;pointer-events:none;
+  transition:all .3s;text-decoration:none;
+}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{border-color:#fff;color:#fff}
 
-/* ===== ACCESSIBILITY ===== */
-*:focus{outline:none}*:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}html{scroll-snap-type:none}.pane-reveal{opacity:1;transform:none}}
+/* ================================================================
+   REVEAL (subtle)
+   ================================================================ */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.show{opacity:1;transform:none}
 
-/* ===== TABLET ===== */
+/* ================================================================
+   ACCESSIBILITY
+   ================================================================ */
+*:focus{outline:none}
+*:focus-visible{outline:2px solid rgba(255,255,255,.5);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* ================================================================
+   WIDESCREEN
+   ================================================================ */
+@media(min-width:1400px){
+  .section{max-width:1200px}
+}
+
+/* ================================================================
+   TABLET
+   ================================================================ */
 @media(max-width:1024px){
-  .about-stats{gap:32px}.info-grid{grid-template-columns:1fr}.gal-cap{font-size:1.1rem}
-  .wine-cards{grid-template-columns:1fr;max-width:400px}
-  .chef-cards{grid-template-columns:1fr;max-width:360px}
-  .season-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .chef-grid{grid-template-columns:repeat(2,1fr)}
+  .info-grid{grid-template-columns:1fr 1fr;gap:32px}
 }
 @media(max-width:1024px)and(min-width:769px){
-  .hero-title{font-size:clamp(2.4rem,6vw,4rem)}.philo-big{font-size:clamp(1.4rem,3.5vw,2.4rem)}
-  .wine-cards{grid-template-columns:repeat(3,1fr);max-width:900px}
-  .chef-cards{grid-template-columns:repeat(3,1fr);max-width:900px}
+  .header{padding:20px 36px}
 }
 
-/* ===== MOBILE ===== */
+/* ================================================================
+   MOBILE
+   ================================================================ */
 @media(max-width:768px){
   br{display:none}
-  html{scroll-snap-type:none;cursor:auto}body{cursor:auto}a,button{cursor:auto}
-  .cur,.cur-ring,.cur-label{display:none}
-  .logo{left:20px;top:20px;font-size:.8rem}
-  .menu-btn{top:16px;right:16px;width:44px;height:44px}
-  .pane{min-height:auto;scroll-snap-align:none;padding:80px 20px}
-  .hero{min-height:100vh;min-height:100dvh;padding:0 20px 12vh}
-  .hero-title{font-size:clamp(2.2rem,9vw,3rem)}
-  .hero-ctas{flex-direction:column;gap:10px}
-  .hero-btn{width:100%;max-width:260px;text-align:center}
+  .header{padding:16px 20px}
+  .header-nav{display:none}.hbg{display:flex}
+  .header.scrolled{padding:12px 20px}
+  .hero{padding:100px 20px 60px}
+  .hero-title{font-size:clamp(1.8rem,8vw,2.6rem)}
   .hero-scroll{display:none}
-  .philo-big{font-size:clamp(1.2rem,5vw,1.6rem)}
-  .pane-about{padding:80px 20px;min-height:auto}
-  .about-overlay{background:linear-gradient(to bottom,var(--bg),rgba(10,11,15,.7))}
-  .about-stats{flex-direction:row;gap:24px;flex-wrap:wrap}
-  .pane-menu{padding:60px 20px}
-  .menu-item{flex-wrap:wrap;gap:4px}
-  .mi-dots{display:none}.mi-price{width:100%;text-align:right;font-size:.75rem}
-  .pane-gallery{min-height:70vh}
-  .gal-cap{bottom:24px;left:20px;font-size:1rem}
-  .gal-arrows{bottom:24px;right:20px}
-  .gal-dots{bottom:24px}
-  .gal-counter{right:20px;font-size:.36rem}
-  .pane-quote{padding:60px 20px;min-height:auto}
-  .pane-info{padding:60px 20px}
-  .info-grid{grid-template-columns:1fr;gap:0}
-  .info-btns{flex-direction:column;gap:8px;width:100%;max-width:260px}
-  .info-btn{width:100%;text-align:center}
-  .foot{flex-direction:column;gap:10px;text-align:center;padding:20px 20px calc(86px + env(safe-area-inset-bottom))}
-  .kakao-float{display:none}.mob-bar{display:block}
-  .fs-link{font-size:clamp(1.4rem,6vw,2rem)}
-  .pane-wine{padding:60px 20px}
-  .wine-cards{grid-template-columns:1fr;max-width:100%}
-  .wine-card{padding:28px 20px}
-  .pane-chef{padding:60px 20px}
-  .chef-cards{grid-template-columns:1fr;max-width:300px}
-  .chef-quote-text{opacity:1;transform:none}
-  .toast{bottom:80px;max-width:340px;padding:14px 20px 14px 16px;gap:12px}
-  .pane-season{padding:60px 20px}
-  .season-grid{grid-template-columns:repeat(2,1fr)}
+  .section{padding:80px 20px}
+  .photo-band{aspect-ratio:16/9;max-height:280px}
+  .menu-item{flex-direction:column;gap:4px;align-items:flex-start}
+  .menu-desc{margin:4px 0;font-size:11px}
+  .gallery-grid{grid-template-columns:1fr;gap:2px}
+  .gallery-item-wide{grid-column:auto;aspect-ratio:4/3}
+  .gallery-cap{opacity:1}
+  .chef-grid{grid-template-columns:1fr;max-width:360px;margin:48px auto 0}
+  .wine-item{flex-direction:column;gap:4px}
+  .info-grid{grid-template-columns:1fr;gap:24px}
+  .info-btns{flex-direction:column}
+  .info-btn{text-align:center}
+  .footer{flex-direction:column;gap:12px;text-align:center;padding:24px 20px calc(80px + env(safe-area-inset-bottom))}
+  .kakao-float{display:none}
+  .mob-bar{display:block}
+  .lb-inner{width:94vw;height:55vh}
+  .lb-prev{left:8px}.lb-next{right:8px}
+  .mob-menu a{font-size:1.3rem}
 }
-@media(max-width:380px){.hero-title{font-size:2rem}.a-stat-num{font-size:1.8rem}}
-@media(hover:none){.hero-btn:active,.info-btn:active,.fs-cta:active,.fs-link:active,.gal-arrow:active{transform:scale(.95)!important;opacity:.85;transition:all .1s}}
-@media print{*{background:transparent!important;color:#000!important}.ld,.scroll-bar,.cur,.cur-ring,.cur-label,.fs,.menu-btn,.kakao-float,.mob-bar,.hero-scroll,.hero-grain,.hero-grad,.hero-bottom{display:none!important}.logo{position:static;padding:16px 0;color:#000!important}.pane{min-height:auto;page-break-inside:avoid}.hero{height:auto;min-height:auto;padding:32px 0}.pane-reveal{opacity:1!important;transform:none!important}a[href]::after{content:" (" attr(href) ")";font-size:.5rem;color:#666}@page{margin:1.5cm}}
+
+@media(max-width:380px){
+  .hero-title{font-size:1.6rem}
+}
+
+/* ================================================================
+   PRINT
+   ================================================================ */
+@media print{
+  *{background:transparent!important;color:#000!important;box-shadow:none!important}
+  .header,.kakao-float,.mob-bar,.back-top,.hero-scroll,.mob-menu{display:none!important}
+  .hero{min-height:auto;padding:32px 0}
+  .rv{opacity:1!important;transform:none!important}
+  a[href]::after{content:" (" attr(href) ")";font-size:10px;color:#666}
+  @page{margin:1.5cm}
+}
 </style>
 </head>
 <body>
-<div class="scroll-bar" id="scrollBar"></div>
 
-<!-- LOADER -->
-<div class="ld" id="ld">
-  <div class="ld-sub">Fine Dining · Hannam</div>
-  <div class="ld-brand">LE CHEF</div>
-  <div class="ld-line"></div>
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <a href="#about" data-close>소개</a>
+  <a href="#menu" data-close>메뉴</a>
+  <a href="#gallery" data-close>갤러리</a>
+  <a href="#chef" data-close>셰프</a>
+  <a href="#wine" data-close>와인</a>
+  <a href="#info" data-close>예약</a>
 </div>
 
-<!-- CURSOR -->
-<div class="cur" id="cur"></div>
-<div class="cur-ring" id="ring"></div>
-<div class="cur-label" id="curLabel"></div>
+<!-- HEADER -->
+<header class="header" id="header">
+  <a class="header-logo" href="#">LE CHEF</a>
+  <nav class="header-nav">
+    <a class="header-link" href="#about">About</a>
+    <a class="header-link" href="#menu">Menu</a>
+    <a class="header-link" href="#gallery">Photo</a>
+    <a class="header-link" href="#chef">Chef</a>
+    <a class="header-link" href="#wine">Wine</a>
+    <a class="header-cta" href="https://pf.kakao.com/_zAqqX" target="_blank" rel="noopener noreferrer">Reservation</a>
+  </nav>
+  <button class="hbg" id="hbg" aria-label="메뉴" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
 
-<!-- LOGO + MENU BTN -->
-<a class="logo" href="#">LE CHEF</a>
-<button class="menu-btn" id="menuBtn" aria-label="메뉴" aria-expanded="false"><s></s><s></s><s></s></button>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <h1 class="hero-title">접시 위에 담긴<br><em>계절의 이야기.</em></h1>
+  <p class="hero-sub">한남동 프렌치 파인다이닝.<br>제철 식재료로 빚어내는 한 끼의 예술.</p>
+  <div class="hero-info">
+    서울 용산구 한남동 00-00<br>
+    02-000-0000<br>
+    수 — 일 디너 18:00 – 23:00
+  </div>
+  <a href="https://pf.kakao.com/_zAqqX" class="hero-reserve" target="_blank" rel="noopener noreferrer">Reservation</a>
+  <div class="hero-scroll">Scroll</div>
+</section>
 
-<!-- FULLSCREEN MENU -->
-<div class="fs" id="fsMenu">
-  <a class="fs-link" href="#hero" data-close>홈</a>
-  <a class="fs-link" href="#about" data-close>소개</a>
-  <a class="fs-link" href="#menu" data-close>코스 메뉴</a>
-  <a class="fs-link" href="#gallery" data-close>갤러리</a>
-  <a class="fs-link" href="#wine" data-close>와인 페어링</a>
-  <a class="fs-link" href="#chef" data-close>셰프 소개</a>
-  <a class="fs-link" href="#info" data-close>예약 안내</a>
-  <a class="fs-link" href="https://instagram.com/lechef.official" target="_blank" rel="noopener noreferrer">Instagram</a>
-  <a class="fs-cta" href="https://pf.kakao.com/_zAqqX" target="_blank" rel="noopener noreferrer">예약하기</a>
+<!-- PHOTO BAND 1 -->
+<div class="photo-band rv">
+  <div class="photo-band-inner pb1" data-hover="Interior">
+    <div class="photo-band-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div>
+  </div>
 </div>
 
-<!-- PANE 1: HERO -->
-<section class="pane hero" id="hero">
-  <div class="hero-bg"></div><div class="hero-grad"></div><div class="hero-bottom"></div><div class="hero-grain"></div>
-  <div class="hero-content">
-    <div class="hero-over">Fine Dining · Hannam</div>
-    <h1 class="hero-title">접시 위에 담긴<br><em>계절의 이야기.</em></h1>
-    <p class="hero-sub">한남동 프렌치 파인다이닝. 제철 식재료로 빚어내는 한 끼의 예술을 경험하세요.</p>
-    <div class="hero-ctas">
-      <a href="https://pf.kakao.com/_zAqqX" class="hero-btn hero-btn-fill" target="_blank" rel="noopener noreferrer">예약하기 →</a>
-      <a href="#menu" class="hero-btn hero-btn-ghost">코스 안내</a>
-    </div>
-  </div>
-  <div class="hero-scroll"><span>Scroll</span><div class="scroll-anim"></div></div>
+<!-- ABOUT -->
+<section class="section about rv" id="about">
+  <div class="sec-label">About</div>
+  <h2 class="sec-heading">좋은 요리는 좋은 재료에서 시작됩니다.</h2>
+  <p class="sec-body">
+    르쉐프는 2019년 한남동에서 시작한 프렌치 파인다이닝입니다.
+    계절마다 바뀌는 코스 메뉴를 통해 한국의 제철 식재료와
+    프렌치 테크닉의 조화를 선보입니다.
+    하루 20석, 단 두 번의 시팅으로 모든 게스트에게
+    온전한 미식 경험을 제공합니다.
+  </p>
+  <div class="sec-divider"></div>
+  <p class="sec-body">
+    전통한식의 친숙한 식재료를 이용하여
+    프렌치 기법으로 재해석한 요리를 선보이며,
+    매 시즌 새롭게 구성되는 코스를 통해
+    한국 식재료의 가능성을 탐구합니다.
+  </p>
 </section>
 
-<!-- PANE 2: PHILOSOPHY -->
-<section class="pane pane-philo" id="philo">
-  <div class="pane-reveal">
-    <p class="philo-big">좋은 요리는 <em>좋은 재료</em>에서 시작되고,<br>좋은 식사는 <em>좋은 공간</em>에서 완성됩니다.</p>
-    <div class="philo-line"></div>
-    <div class="philo-sub">Our Philosophy</div>
+<!-- PHOTO BAND 2 -->
+<div class="photo-band rv">
+  <div class="photo-band-inner pb2" data-hover="Cuisine">
+    <div class="photo-band-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div>
   </div>
+</div>
+
+<!-- MENU -->
+<section class="section rv" id="menu">
+  <div class="sec-label">Course Menu</div>
+  <h2 class="sec-heading">코스 메뉴</h2>
+  <p class="sec-body">계절마다 새로워지는 8코스 디너. 셰프가 엄선한 제철 식재료로 구성됩니다.</p>
+
+  <div class="menu-list">
+    <div class="menu-cat">Dinner Course</div>
+    <div class="menu-item"><div><div class="menu-name">아뮤즈 부쉬<span class="menu-name-en">Amuse-Bouche</span></div></div></div>
+    <div class="menu-item"><div><div class="menu-name">전채<span class="menu-name-en">Appetizer</span></div></div></div>
+    <div class="menu-item"><div><div class="menu-name">수프<span class="menu-name-en">Velouté</span></div></div></div>
+    <div class="menu-item"><div><div class="menu-name">생선 요리<span class="menu-name-en">Poisson</span></div></div></div>
+    <div class="menu-item"><div><div class="menu-name">그라니테<span class="menu-name-en">Granité</span></div></div></div>
+    <div class="menu-item"><div><div class="menu-name">메인 요리<span class="menu-name-en">Plat Principal</span></div></div></div>
+    <div class="menu-item"><div><div class="menu-name">치즈<span class="menu-name-en">Fromage</span></div></div></div>
+    <div class="menu-item"><div><div class="menu-name">디저트<span class="menu-name-en">Dessert & Petit Four</span></div></div><div class="menu-price">220,000</div></div>
+
+    <div class="menu-cat">Lunch Course</div>
+    <div class="menu-item"><div><div class="menu-name">런치 코스<span class="menu-name-en">6-Course Lunch</span></div></div><div class="menu-price">150,000</div></div>
+
+    <div class="menu-cat">Pairing</div>
+    <div class="menu-item"><div><div class="menu-name">와인 페어링<span class="menu-name-en">Wine Pairing · 6 Glasses</span></div></div><div class="menu-price">120,000</div></div>
+    <div class="menu-item"><div><div class="menu-name">논알코올 페어링<span class="menu-name-en">Non-Alcoholic Pairing</span></div></div><div class="menu-price">60,000</div></div>
+  </div>
+
+  <div class="menu-note">※ 메뉴는 계절과 식재료 수급에 따라 변경됩니다.</div>
 </section>
 
-<!-- PANE 3: ABOUT -->
-<section class="pane pane-about" id="about">
-  <div class="about-bg" data-hover="Our Story"></div>
-  <div class="about-overlay"></div>
-  <div class="about-content pane-reveal">
-    <div class="about-label">About Us</div>
-    <h2 class="about-title">2019년 한남동,<br><em>르쉐프</em>가 시작된 곳.</h2>
-    <p class="about-body">계절마다 바뀌는 코스를 통해 한국의 제철 식재료와 프렌치 테크닉의 조화를 선보입니다. 하루 20석, 두 번의 시팅으로 모든 게스트에게 온전한 미식 경험을 제공합니다.</p>
-    <div class="about-stats">
-      <div class="a-stat"><span class="a-stat-num" data-count="20">0</span><span class="a-stat-label">하루 좌석</span></div>
-      <div class="a-stat"><span class="a-stat-num" data-count="8">0</span><span class="a-stat-label">코스 구성</span></div>
-      <div class="a-stat"><span class="a-stat-num" data-count="15">0</span><span class="a-stat-label">셰프 경력 (년)</span></div>
-    </div>
-  </div>
-</section>
+<!-- GALLERY -->
+<section class="section rv" id="gallery">
+  <div class="sec-label">Photo</div>
+  <h2 class="sec-heading">갤러리</h2>
 
-<!-- PANE 4: MENU -->
-<section class="pane pane-menu" id="menu">
-  <div class="pane-reveal" style="width:100%;display:flex;flex-direction:column;align-items:center">
-    <div class="menu-label">Course Menu</div>
-    <h2 class="menu-title">8코스 디너</h2>
-    <div class="menu-list">
-      <div class="menu-item"><span class="mi-num">01</span><span class="mi-name">아뮤즈 부쉬<small>Amuse-Bouche</small></span><span class="mi-dots"></span><span class="mi-price"></span></div>
-      <div class="menu-item"><span class="mi-num">02</span><span class="mi-name">전채<small>Appetizer</small></span><span class="mi-dots"></span><span class="mi-price"></span></div>
-      <div class="menu-item"><span class="mi-num">03</span><span class="mi-name">수프<small>Velouté</small></span><span class="mi-dots"></span><span class="mi-price"></span></div>
-      <div class="menu-item"><span class="mi-num">04</span><span class="mi-name">생선 요리<small>Poisson</small></span><span class="mi-dots"></span><span class="mi-price"></span></div>
-      <div class="menu-item"><span class="mi-num">05</span><span class="mi-name">그라니테<small>Granité</small></span><span class="mi-dots"></span><span class="mi-price"></span></div>
-      <div class="menu-item"><span class="mi-num">06</span><span class="mi-name">메인 요리<small>Plat Principal</small></span><span class="mi-dots"></span><span class="mi-price"></span></div>
-      <div class="menu-item"><span class="mi-num">07</span><span class="mi-name">치즈<small>Fromage</small></span><span class="mi-dots"></span><span class="mi-price"></span></div>
-      <div class="menu-item"><span class="mi-num">08</span><span class="mi-name">디저트<small>Dessert & Petit Four</small></span><span class="mi-dots"></span><span class="mi-price">220,000</span></div>
-    </div>
-    <div class="menu-foot">런치 코스 150,000 · 와인 페어링 120,000 · 메뉴는 계절에 따라 변경됩니다</div>
-  </div>
-</section>
-
-<!-- PANE 5: GALLERY SLIDESHOW -->
-<section class="pane pane-gallery" id="gallery">
-  <div class="gal-slide gs1 active" data-cap="시그니처 코스" data-sub="Signature Course"><div class="gal-slide-bg"></div><div class="gal-slide-overlay"></div><div class="gal-slide-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
-  <div class="gal-slide gs2" data-cap="전채 플레이팅" data-sub="Appetizer"><div class="gal-slide-bg"></div><div class="gal-slide-overlay"></div><div class="gal-slide-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
-  <div class="gal-slide gs3" data-cap="다이닝 공간" data-sub="Interior"><div class="gal-slide-bg"></div><div class="gal-slide-overlay"></div><div class="gal-slide-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
-  <div class="gal-slide gs4" data-cap="메인 디쉬" data-sub="Plat Principal"><div class="gal-slide-bg"></div><div class="gal-slide-overlay"></div><div class="gal-slide-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
-  <div class="gal-slide gs5" data-cap="디저트" data-sub="Dessert"><div class="gal-slide-bg"></div><div class="gal-slide-overlay"></div><div class="gal-slide-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
-  <div class="gal-slide gs6" data-cap="와인 셀렉션" data-sub="Wine Cellar"><div class="gal-slide-bg"></div><div class="gal-slide-overlay"></div><div class="gal-slide-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
-  <div class="gal-slide gs7" data-cap="오픈 키친" data-sub="Kitchen"><div class="gal-slide-bg"></div><div class="gal-slide-overlay"></div><div class="gal-slide-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
-  <div class="gal-slide gs8" data-cap="프라이빗 룸" data-sub="Private"><div class="gal-slide-bg"></div><div class="gal-slide-overlay"></div><div class="gal-slide-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div>
-  <div class="gal-ui">
-    <div class="gal-counter" id="galCounter">01 / 08</div>
-    <div class="gal-cap" id="galCap">시그니처 코스<span class="gal-cap-sub">Signature Course</span></div>
-    <div class="gal-dots" id="galDots"></div>
-    <div class="gal-arrows"><button class="gal-arrow" id="galPrev" aria-label="이전">&#8592;</button><button class="gal-arrow" id="galNext" aria-label="다음">&#8594;</button></div>
+  <div class="gallery-grid">
+    <div class="gallery-item gallery-item-wide gi1" data-cap="시그니처 코스"><div class="gallery-item-inner"><div class="gallery-item-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div><div class="gallery-cap">시그니처 코스</div></div>
+    <div class="gallery-item gi2" data-cap="전채 플레이팅"><div class="gallery-item-inner"><div class="gallery-item-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div><div class="gallery-cap">전채 플레이팅</div></div>
+    <div class="gallery-item gi3" data-cap="다이닝 공간"><div class="gallery-item-inner"><div class="gallery-item-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div><div class="gallery-cap">다이닝 공간</div></div>
+    <div class="gallery-item gi4" data-cap="메인 디쉬"><div class="gallery-item-inner"><div class="gallery-item-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div><div class="gallery-cap">메인 디쉬</div></div>
+    <div class="gallery-item gi5" data-cap="디저트"><div class="gallery-item-inner"><div class="gallery-item-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div><div class="gallery-cap">디저트</div></div>
+    <div class="gallery-item gi6" data-cap="와인 셀렉션"><div class="gallery-item-inner"><div class="gallery-item-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div><div class="gallery-cap">와인 셀렉션</div></div>
+    <div class="gallery-item gallery-item-wide gi7" data-cap="오픈 키친"><div class="gallery-item-inner"><div class="gallery-item-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div><div class="gallery-cap">오픈 키친</div></div>
+    <div class="gallery-item gi8" data-cap="프라이빗 룸"><div class="gallery-item-inner"><div class="gallery-item-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div></div><div class="gallery-cap">프라이빗 룸</div></div>
   </div>
 </section>
 
-<!-- PANE 6: WINE PAIRING -->
-<section class="pane pane-wine" id="wine">
-  <div class="pane-reveal" style="width:100%;display:flex;flex-direction:column;align-items:center">
-    <div class="wine-label">Wine Pairing</div>
-    <h2 class="wine-title"><em>코스</em>와 함께하는 와인</h2>
-    <p class="wine-sub">소믈리에가 엄선한 와인으로 각 코스의 풍미를 한층 끌어올립니다.</p>
-    <div class="wine-cards">
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="이미지 뷰어">
+  <div class="lb-bg" id="lbBg"></div>
+  <button class="lb-close" id="lbClose" aria-label="닫기">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="이전">&#8592;</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="다음">&#8594;</button>
+  <div class="lb-inner" id="lbInner"></div>
+  <span class="lb-counter" id="lbCounter"></span>
+  <span class="lb-caption" id="lbCap"></span>
+</div>
 
-      <!-- Wine Card 1 -->
-      <div class="wine-card" data-hover="Champagne">
-        <div class="wine-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 2C12 2 8 6 8 10c0 2.21 1.79 4 4 4s4-1.79 4-4c0-4-4-8-4-8z"/>
-            <line x1="12" y1="14" x2="12" y2="22"/>
-            <line x1="8" y1="22" x2="16" y2="22"/>
-          </svg>
-        </div>
-        <div class="wine-type">Champagne</div>
-        <div class="wine-name"><em>Dom Pérignon</em> Vintage 2013</div>
-        <p class="wine-desc">아뮤즈 부쉬부터 전채까지, 섬세한 거품과 브리오슈 노트가 첫 코스의 서막을 장식합니다.</p>
-        <div class="wine-meta">
-          <span class="wine-region">Épernay, France</span>
-          <span class="wine-price">Glass 85,000</span>
-        </div>
-      </div>
+<!-- CHEF -->
+<section class="section rv" id="chef">
+  <div class="sec-label">Chef</div>
+  <h2 class="sec-heading">셰프 소개</h2>
 
-      <!-- Wine Card 2 -->
-      <div class="wine-card" data-hover="Bourgogne">
-        <div class="wine-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 2C12 2 8 6 8 10c0 2.21 1.79 4 4 4s4-1.79 4-4c0-4-4-8-4-8z"/>
-            <line x1="12" y1="14" x2="12" y2="22"/>
-            <line x1="8" y1="22" x2="16" y2="22"/>
-          </svg>
-        </div>
-        <div class="wine-type">Bourgogne Blanc</div>
-        <div class="wine-name"><em>Puligny-Montrachet</em> 1er Cru</div>
-        <p class="wine-desc">생선 요리와 수프에 곁들이는 화이트 부르고뉴. 미네랄과 시트러스 아로마가 해산물의 풍미를 감싸줍니다.</p>
-        <div class="wine-meta">
-          <span class="wine-region">Burgundy, France</span>
-          <span class="wine-price">Glass 65,000</span>
-        </div>
-      </div>
-
-      <!-- Wine Card 3 -->
-      <div class="wine-card" data-hover="Bordeaux">
-        <div class="wine-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 2C12 2 8 6 8 10c0 2.21 1.79 4 4 4s4-1.79 4-4c0-4-4-8-4-8z"/>
-            <line x1="12" y1="14" x2="12" y2="22"/>
-            <line x1="8" y1="22" x2="16" y2="22"/>
-          </svg>
-        </div>
-        <div class="wine-type">Bordeaux Rouge</div>
-        <div class="wine-name"><em>Château Margaux</em> 2015</div>
-        <p class="wine-desc">메인 요리를 위한 그랑크뤼. 블랙커런트와 바이올렛의 복합적인 부케가 고기의 질감과 조화를 이룹니다.</p>
-        <div class="wine-meta">
-          <span class="wine-region">Margaux, France</span>
-          <span class="wine-price">Glass 120,000</span>
-        </div>
-      </div>
-
+  <div class="chef-grid">
+    <div class="chef-card">
+      <div class="chef-photo cp1"><div class="chef-photo-inner"><div class="chef-photo-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div></div></div>
+      <div class="chef-info"><h3>박준서</h3><div class="chef-role">Head Chef · Founder</div></div>
     </div>
-    <p class="wine-foot">풀 페어링 120,000 · 하프 페어링 70,000 · 소믈리에 추천 가능</p>
-  </div>
-</section>
-
-<!-- PANE 7: QUOTE -->
-<section class="pane pane-quote" id="quote">
-  <div class="pane-reveal quote-content">
-    <div class="quote-stars">★ ★ ★ ★ ★</div>
-    <div class="quote-item active" data-quote="0">
-      <p class="quote-text">기념일에 방문했는데, 처음부터 끝까지 완벽한 저녁이었습니다. 접시 하나하나에 셰프의 이야기가 담겨 있어요. 서울 최고의 파인다이닝입니다.</p>
-      <div class="quote-who">김** 님 — 캐치테이블</div>
+    <div class="chef-card">
+      <div class="chef-photo cp2"><div class="chef-photo-inner"><div class="chef-photo-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div></div></div>
+      <div class="chef-info"><h3>김하율</h3><div class="chef-role">Pâtissier</div></div>
     </div>
-    <div class="quote-item" data-quote="1">
-      <p class="quote-text">코스 전체가 하나의 스토리텔링이었어요. 특히 생선 요리의 소스와 와인 페어링이 환상적이었습니다. 반드시 다시 올 것입니다.</p>
-      <div class="quote-who">이** 님 — 네이버</div>
-    </div>
-    <div class="quote-item" data-quote="2">
-      <p class="quote-text">프라이빗 룸에서 프로포즈를 했는데, 스태프분들의 세심한 배려 덕분에 평생 잊지 못할 순간이 되었습니다. 음식도, 서비스도, 공간도 모두 완벽했습니다.</p>
-      <div class="quote-who">박** 님 — 캐치테이블</div>
-    </div>
-    <div class="quote-nav" id="quoteNav">
-      <button class="quote-nav-dot active" data-qnav="0" aria-label="후기 1"></button>
-      <button class="quote-nav-dot" data-qnav="1" aria-label="후기 2"></button>
-      <button class="quote-nav-dot" data-qnav="2" aria-label="후기 3"></button>
+    <div class="chef-card">
+      <div class="chef-photo cp3"><div class="chef-photo-inner"><div class="chef-photo-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg></div></div></div>
+      <div class="chef-info"><h3>이서준</h3><div class="chef-role">Sommelier</div></div>
     </div>
   </div>
 </section>
 
-<!-- PANE 7.5: SEASONAL HIGHLIGHT -->
-<section class="pane pane-season" id="season">
-  <div class="pane-reveal" style="width:100%;display:flex;flex-direction:column;align-items:center">
-    <div class="season-label">This Season</div>
-    <h2 class="season-title">겨울, <em>제철의 맛</em></h2>
-    <p class="season-desc">매 시즌 셰프가 직접 산지를 방문해 엄선한 식재료로 코스를 구성합니다. 이번 겨울 코스의 주인공들을 소개합니다.</p>
-    <div class="season-grid">
-      <div class="season-cell">
-        <div class="season-cell-icon">&#9679;</div>
-        <div class="season-cell-name">제주 방어</div>
-        <div class="season-cell-detail">겨울 바다의 정수<br>탄력 있는 식감</div>
-      </div>
-      <div class="season-cell">
-        <div class="season-cell-icon">&#9679;</div>
-        <div class="season-cell-name">강원 송이</div>
-        <div class="season-cell-detail">깊은 향의 산물<br>콩소메 베이스</div>
-      </div>
-      <div class="season-cell">
-        <div class="season-cell-icon">&#9679;</div>
-        <div class="season-cell-name">한우 채끝</div>
-        <div class="season-cell-detail">횡성 한우 1++<br>저온 숙성 28일</div>
-      </div>
-      <div class="season-cell">
-        <div class="season-cell-icon">&#9679;</div>
-        <div class="season-cell-name">남해 유자</div>
-        <div class="season-cell-detail">디저트의 마무리<br>유자 소르베</div>
-      </div>
-    </div>
+<!-- WINE -->
+<section class="section rv" id="wine">
+  <div class="sec-label">Wine</div>
+  <h2 class="sec-heading">와인 셀렉션</h2>
+  <p class="sec-body">소믈리에가 코스에 맞춰 엄선한 와인을 잔 단위로 제안합니다.</p>
+
+  <div class="wine-list">
+    <div class="wine-item"><div><div class="wine-name">Dom Pérignon</div><div class="wine-detail">Champagne · France</div></div><div class="wine-price">Glass 48,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Chablis Premier Cru</div><div class="wine-detail">Bourgogne Blanc · France</div></div><div class="wine-price">Glass 32,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Château Margaux</div><div class="wine-detail">Bordeaux Rouge · France</div></div><div class="wine-price">Glass 55,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Barolo Riserva</div><div class="wine-detail">Piemonte · Italy</div></div><div class="wine-price">Glass 38,000</div></div>
   </div>
 </section>
 
-<!-- PANE 8: CHEF -->
-<section class="pane pane-chef" id="chef">
-  <div class="pane-reveal" style="width:100%;display:flex;flex-direction:column;align-items:center">
-    <div class="chef-label">Our Team</div>
-    <h2 class="chef-title">요리를 <em>예술</em>로 만드는 사람들</h2>
-    <p class="chef-sub">파리, 도쿄, 코펜하겐을 거쳐 한남동에 모인 셰프들의 이야기.</p>
-    <div class="chef-cards">
-
-      <!-- Chef 1: Head Chef -->
-      <div class="chef-card" data-hover="Head Chef">
-        <div class="chef-photo">
-          <div class="chef-photo-bg chf1"></div>
-          <div class="chef-photo-overlay"></div>
-          <div class="chef-photo-ph">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="8" r="4"/>
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
-            </svg>
-          </div>
-          <div class="chef-quote">
-            <p class="chef-quote-text">"좋은 요리는 손이 아니라 마음에서 시작됩니다."</p>
-          </div>
-        </div>
-        <div class="chef-info">
-          <div class="chef-name">김민준</div>
-          <div class="chef-role">Head Chef</div>
-          <div class="chef-tags">
-            <span class="chef-tag">프렌치</span>
-            <span class="chef-tag">Le Cordon Bleu</span>
-            <span class="chef-tag">15년 경력</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Chef 2: Sous Chef -->
-      <div class="chef-card" data-hover="Sous Chef">
-        <div class="chef-photo">
-          <div class="chef-photo-bg chf2"></div>
-          <div class="chef-photo-overlay"></div>
-          <div class="chef-photo-ph">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="8" r="4"/>
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
-            </svg>
-          </div>
-          <div class="chef-quote">
-            <p class="chef-quote-text">"플레이팅은 시각으로 느끼는 첫 번째 맛입니다."</p>
-          </div>
-        </div>
-        <div class="chef-info">
-          <div class="chef-name">박서연</div>
-          <div class="chef-role">Sous Chef</div>
-          <div class="chef-tags">
-            <span class="chef-tag">플레이팅</span>
-            <span class="chef-tag">Noma 인턴</span>
-            <span class="chef-tag">8년 경력</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Chef 3: Pastry Chef -->
-      <div class="chef-card" data-hover="Pâtissier">
-        <div class="chef-photo">
-          <div class="chef-photo-bg chf3"></div>
-          <div class="chef-photo-overlay"></div>
-          <div class="chef-photo-ph">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="8" r="4"/>
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
-            </svg>
-          </div>
-          <div class="chef-quote">
-            <p class="chef-quote-text">"디저트는 식사의 마지막이 아니라, 기억의 시작입니다."</p>
-          </div>
-        </div>
-        <div class="chef-info">
-          <div class="chef-name">이하은</div>
-          <div class="chef-role">Pâtissier</div>
-          <div class="chef-tags">
-            <span class="chef-tag">디저트</span>
-            <span class="chef-tag">Pierre Hermé</span>
-            <span class="chef-tag">10년 경력</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
+<!-- PHOTO BAND 3 -->
+<div class="photo-band rv">
+  <div class="photo-band-inner pb3" data-hover="Private Room">
+    <div class="photo-band-ph"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div>
   </div>
-</section>
+</div>
 
-<!-- PANE 9: INFO -->
-<section class="pane pane-info" id="info">
-  <div class="pane-reveal" style="width:100%;display:flex;flex-direction:column;align-items:center">
-    <div class="info-label">Reservation</div>
-    <h2 class="info-title">예약 안내</h2>
-    <div class="info-grid">
-      <div class="info-cell"><h4>Address</h4><p>서울 용산구 한남동 00-00<br>한남대교 북단 3분</p></div>
-      <div class="info-cell"><h4>Hours</h4><p>수 — 일 디너 18:00 – 23:00<br>토 · 일 런치 12:00 – 15:00<br>월 · 화 정기 휴무</p></div>
-      <div class="info-cell"><h4>Note</h4><p>완전 예약제 · 20석 한정<br>시팅 2회 (18:00 / 20:30)<br>발레 파킹 · 콜키지 50,000</p></div>
+<!-- INFO -->
+<section class="section rv" id="info">
+  <div class="sec-label">Reservation</div>
+  <h2 class="sec-heading">예약 안내</h2>
+
+  <div class="info-grid">
+    <div class="info-col">
+      <h4>Address</h4>
+      <p>서울 용산구 한남동 00-00<br>한남대교 북단 3분</p>
+      <div class="info-btns">
+        <a href="https://map.kakao.com" class="info-btn" target="_blank" rel="noopener noreferrer">카카오맵 →</a>
+        <a href="https://pf.kakao.com/_zAqqX" class="info-btn info-btn-fill" target="_blank" rel="noopener noreferrer">예약하기</a>
+      </div>
     </div>
-    <div class="info-btns">
-      <a href="https://pf.kakao.com/_zAqqX" class="info-btn info-btn-fill" target="_blank" rel="noopener noreferrer">예약하기</a>
-      <a href="https://map.kakao.com" class="info-btn info-btn-ghost" target="_blank" rel="noopener noreferrer">카카오맵 →</a>
+    <div class="info-col">
+      <h4>Hours</h4>
+      <p>수 — 일 디너 18:00 – 23:00<br>토 · 일 런치 12:00 – 15:00<br>월 · 화 정기 휴무</p>
+    </div>
+    <div class="info-col">
+      <h4>Note</h4>
+      <p>완전 예약제 · 20석 한정<br>시팅 2회 (18:00 / 20:30)<br>발레 파킹 · 콜키지 50,000</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="foot">
-  <a class="foot-logo" href="#">LE CHEF</a>
-  <span class="foot-copy">&copy; <span id="yr">2025</span> LE CHEF — Fine Dining, Hannam</span>
-  <div class="foot-right"><a href="https://instagram.com/lechef.official" class="foot-link" target="_blank" rel="noopener noreferrer">@lechef.official</a></div>
+<footer class="footer">
+  <a class="footer-logo" href="#">LE CHEF</a>
+  <span class="footer-copy">&copy; <span id="yr">2025</span> LE CHEF — Fine Dining, Hannam</span>
+  <div class="footer-links">
+    <a href="https://instagram.com/lechef.official" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="#hero" class="footer-link" id="footTop">Top ↑</a>
+  </div>
 </footer>
 
 <!-- FLOATING -->
+<a href="#hero" class="back-top" id="backTop" aria-label="맨 위로">↑</a>
 <a href="https://pf.kakao.com/_zAqqX" class="kakao-float" target="_blank" rel="noopener noreferrer" aria-label="카카오톡">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.48 3 2 6.58 2 11c0 2.83 1.88 5.32 4.71 6.73-.17.65-.63 2.37-.72 2.74-.11.46.17.46.36.33.15-.1 2.37-1.62 3.33-2.27.74.1 1.51.17 2.32.17 5.52 0 10-3.58 10-8s-4.48-8-10-8z"/></svg>
 </a>
-<div class="mob-bar"><div class="mb-inner"><a href="tel:02-000-0000" class="m-line">전화</a><a href="https://pf.kakao.com/_zAqqX" class="m-fill" target="_blank" rel="noopener noreferrer">예약하기</a></div></div>
-
-<!-- TOAST NOTIFICATION -->
-<div class="toast" id="toast" role="alert" aria-live="polite">
-  <div class="toast-icon">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-    </svg>
-  </div>
-  <div class="toast-body">
-    <div class="toast-title">오늘의 좌석이 남아있어요</div>
-    <div class="toast-msg">금요일 20:30 시팅 — 2석 여유</div>
-  </div>
-  <button class="toast-close" id="toastClose" aria-label="닫기">&times;</button>
-  <div class="toast-bar" id="toastBar"></div>
-</div>
+<div class="mob-bar"><div class="mob-bar-inner"><a href="tel:02-000-0000" class="mb-line">전화</a><a href="https://pf.kakao.com/_zAqqX" class="mb-fill" target="_blank" rel="noopener noreferrer">예약하기</a></div></div>
 
 <script>
-/* ===== YEAR ===== */
-document.getElementById('yr').textContent=new Date().getFullYear();
+/* year */
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-/* ===== LOADER ===== */
-var ld=document.getElementById('ld');
-window.addEventListener('load',function(){setTimeout(function(){ld.classList.add('done')},2400)});
-document.body.style.overflow='hidden';setTimeout(function(){document.body.style.overflow=''},2800);
+/* header scroll */
+var header = document.getElementById('header');
+var backTop = document.getElementById('backTop');
+window.addEventListener('scroll', function() {
+  header.classList.toggle('scrolled', window.scrollY > 80);
+  backTop.classList.toggle('visible', window.scrollY > 600);
+}, { passive: true });
 
-/* ===== CURSOR ===== */
-var isMob=window.matchMedia('(max-width:768px)').matches||'ontouchstart'in window;
-if(!isMob){
-  var cur=document.getElementById('cur'),ring=document.getElementById('ring'),curLabel=document.getElementById('curLabel');
-  var mx=0,my=0,cx=0,cy=0,rx=0,ry=0;
-  document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY},{passive:true});
-  (function loop(){cx+=(mx-cx)*.22;cy+=(my-cy)*.22;rx+=(mx-rx)*.06;ry+=(my-ry)*.06;
-    cur.style.transform='translate('+(cx-2.5)+'px,'+(cy-2.5)+'px)';
-    ring.style.transform='translate('+(rx-18)+'px,'+(ry-18)+'px)';
-    curLabel.style.transform='translate('+(rx+24)+'px,'+(ry-8)+'px)';
-    requestAnimationFrame(loop)})();
-  document.querySelectorAll('[data-hover]').forEach(function(el){
-    el.addEventListener('mouseenter',function(){ring.classList.add('hover');curLabel.textContent=el.dataset.hover;curLabel.classList.add('show')});
-    el.addEventListener('mouseleave',function(){ring.classList.remove('hover');curLabel.classList.remove('show')})});
-  document.querySelectorAll('.logo,.menu-btn,.fs-link,.fs-cta,.hero-btn,.info-btn,.gal-arrow,.kakao-float,.foot-link,.toast-close').forEach(function(el){
-    el.addEventListener('mouseenter',function(){ring.classList.add('nav-hover')});
-    el.addEventListener('mouseleave',function(){ring.classList.remove('nav-hover')})});
-}
+/* mobile menu */
+var hbg = document.getElementById('hbg');
+var mobMenu = document.getElementById('mobMenu');
+function closeMob() { hbg.classList.remove('open'); mobMenu.classList.remove('open'); hbg.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+hbg.onclick = function() {
+  var o = !mobMenu.classList.contains('open');
+  hbg.classList.toggle('open', o); mobMenu.classList.toggle('open', o);
+  hbg.setAttribute('aria-expanded', o);
+  document.body.style.overflow = o ? 'hidden' : '';
+};
+document.querySelectorAll('[data-close]').forEach(function(l) { l.addEventListener('click', closeMob); });
 
-/* ===== FULLSCREEN MENU ===== */
-var menuBtn=document.getElementById('menuBtn'),fsMenu=document.getElementById('fsMenu');
-function closeFS(){menuBtn.classList.remove('open');fsMenu.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');document.body.style.overflow=''}
-menuBtn.onclick=function(){var o=!fsMenu.classList.contains('open');menuBtn.classList.toggle('open',o);fsMenu.classList.toggle('open',o);menuBtn.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
-document.querySelectorAll('[data-close]').forEach(function(l){l.addEventListener('click',closeFS)});
+/* reveal */
+var revObs = new IntersectionObserver(function(es) {
+  es.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('show'); revObs.unobserve(e.target); } });
+}, { threshold: .1 });
+document.querySelectorAll('.rv').forEach(function(el) { revObs.observe(el); });
 
-/* ===== SCROLL ===== */
-var scrollBar=document.getElementById('scrollBar');
-var scrollTicking=false;
-function onScroll(){var sy=window.scrollY,docH=document.documentElement.scrollHeight-window.innerHeight;
-  scrollBar.style.transform='scaleX('+Math.min(sy/docH,1)+')';scrollTicking=false}
-window.addEventListener('scroll',function(){if(!scrollTicking){requestAnimationFrame(onScroll);scrollTicking=true}},{passive:true});
-
-/* ===== PANE REVEAL ===== */
-var revObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.pane-reveal').forEach(function(el){revObs.observe(el)});
-
-/* ===== COUNT UP ===== */
-var countObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target,t=parseInt(el.dataset.count),dur=1600,start=performance.now();
-  function update(now){var p=Math.min((now-start)/dur,1);var ease=1-Math.pow(1-p,4);el.textContent=Math.floor(t*ease);if(p<1)requestAnimationFrame(update);else el.textContent=t}
-  requestAnimationFrame(update);countObs.unobserve(el)}})},{threshold:.5});
-document.querySelectorAll('[data-count]').forEach(function(el){countObs.observe(el)});
-
-/* ===== GALLERY SLIDESHOW ===== */
-var slides=document.querySelectorAll('.gal-slide');
-var galCap=document.getElementById('galCap'),galCounter=document.getElementById('galCounter'),galDots=document.getElementById('galDots');
-var gIdx=0,gAuto;
-var phSVG='<svg viewBox="0 0 24 24" style="width:64px;height:64px;fill:none;stroke:rgba(201,169,110,.12);stroke-width:.5"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg>';
-var bgMap={};
-slides.forEach(function(s,i){
-  var cls=[].slice.call(s.classList).find(function(c){return/^gs\d+$/.test(c)});
-  if(cls)bgMap[cls]=getComputedStyle(s.querySelector('.gal-slide-bg')).background;
-  var d=document.createElement('button');d.className='gal-dot'+(i===0?' active':'');d.setAttribute('aria-label','슬라이드 '+(i+1));d.onclick=function(){gGo(i);gReset()};galDots.appendChild(d)});
-var gDotEls=galDots.querySelectorAll('.gal-dot');
-function gGo(i){gIdx=i;slides.forEach(function(s,j){s.classList.toggle('active',j===i)});
-  gDotEls.forEach(function(d,j){d.classList.toggle('active',j===i)});
-  var s=slides[i];galCap.textContent=s.dataset.cap||'';
-  var sub=document.createElement('span');sub.className='gal-cap-sub';sub.textContent=s.dataset.sub||'';galCap.appendChild(sub);
-  galCounter.textContent=String(i+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0')}
-document.getElementById('galPrev').onclick=function(){gGo((gIdx-1+slides.length)%slides.length);gReset()};
-document.getElementById('galNext').onclick=function(){gGo((gIdx+1)%slides.length);gReset()};
-function gReset(){clearInterval(gAuto);gAuto=setInterval(function(){gGo((gIdx+1)%slides.length)},5000)}
-gReset();
-var gTx=0;
-document.querySelector('.pane-gallery').addEventListener('touchstart',function(e){gTx=e.touches[0].clientX},{passive:true});
-document.querySelector('.pane-gallery').addEventListener('touchend',function(e){var d=gTx-e.changedTouches[0].clientX;if(Math.abs(d)>40){gGo((gIdx+(d>0?1:-1)+slides.length)%slides.length);gReset()}},{passive:true});
-
-/* ===== QUOTE ROTATION ===== */
-var quoteItems=document.querySelectorAll('.quote-item');
-var quoteNavDots=document.querySelectorAll('.quote-nav-dot');
-var qIdx=0,qAuto;
-function qGo(i){
-  qIdx=i;
-  quoteItems.forEach(function(item,j){item.classList.toggle('active',j===i)});
-  quoteNavDots.forEach(function(d,j){d.classList.toggle('active',j===i)});
-}
-quoteNavDots.forEach(function(dot){
-  dot.addEventListener('click',function(){
-    qGo(parseInt(this.dataset.qnav));qResetQ();
+/* smooth anchor */
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var h = this.getAttribute('href'); if (h === '#') return;
+    e.preventDefault();
+    var t = document.querySelector(h);
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
-function qResetQ(){clearInterval(qAuto);qAuto=setInterval(function(){qGo((qIdx+1)%quoteItems.length)},6000)}
-qResetQ();
-/* Pause quote rotation when not visible */
-var quoteSection=document.getElementById('quote');
-var quoteVisObs=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting){qResetQ()}else{clearInterval(qAuto)}
-  });
-},{threshold:.3});
-if(quoteSection)quoteVisObs.observe(quoteSection);
 
-/* ===== SMOOTH ANCHOR ===== */
-document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=this.getAttribute('href');if(h==='#')return;e.preventDefault();var t=document.querySelector(h);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+/* lightbox */
+var lb = document.getElementById('lb'), lbInner = document.getElementById('lbInner');
+var lbCounter = document.getElementById('lbCounter'), lbCap = document.getElementById('lbCap');
+var phSVG = '<svg viewBox="0 0 24 24" style="width:48px;height:48px;fill:none;stroke:rgba(255,255,255,.1);stroke-width:.5"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="M21 15l-5-5L5 21"/></svg>';
+var bgMap = {
+  'gi1': 'linear-gradient(135deg,#7a5a28,#6a4a20)',
+  'gi2': 'linear-gradient(135deg,#6a5a38,#5a4a28)',
+  'gi3': 'linear-gradient(135deg,#8a6a30,#7a5a28)',
+  'gi4': 'linear-gradient(135deg,#5a4a30,#6a5838)',
+  'gi5': 'linear-gradient(135deg,#7a6a38,#6a5a30)',
+  'gi6': 'linear-gradient(135deg,#6a5028,#8a6a35)',
+  'gi7': 'linear-gradient(135deg,#8a7040,#7a5a28)',
+  'gi8': 'linear-gradient(135deg,#6a5a30,#5a4820)'
+};
+var lbItems = [], lbIdx = 0;
+document.querySelectorAll('.gallery-item').forEach(function(el, i) {
+  var cls = [].slice.call(el.classList).find(function(c) { return /^gi\d+$/.test(c); });
+  lbItems.push({ cap: el.dataset.cap || '', bg: cls });
+  el.style.cursor = 'pointer';
+  el.addEventListener('click', function() { lbIdx = i; lbShow(); });
+});
+function lbShow() {
+  lb.classList.add('open'); document.body.style.overflow = 'hidden';
+  var item = lbItems[lbIdx];
+  lbCounter.textContent = String(lbIdx + 1).padStart(2, '0') + ' / ' + String(lbItems.length).padStart(2, '0');
+  lbCap.textContent = item.cap;
+  lbInner.style.background = bgMap[item.bg] || '#6a5028';
+  lbInner.innerHTML = '';
+}
+function lbHide() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('lbClose').onclick = lbHide;
+document.getElementById('lbBg').onclick = lbHide;
+document.getElementById('lbPrev').onclick = function() { lbIdx = (lbIdx - 1 + lbItems.length) % lbItems.length; lbShow(); };
+document.getElementById('lbNext').onclick = function() { lbIdx = (lbIdx + 1) % lbItems.length; lbShow(); };
+var lbTx = 0;
+lb.addEventListener('touchstart', function(e) { lbTx = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend', function(e) {
+  var d = lbTx - e.changedTouches[0].clientX;
+  if (Math.abs(d) > 40) { lbIdx = (lbIdx + (d > 0 ? 1 : -1) + lbItems.length) % lbItems.length; lbShow(); }
+}, { passive: true });
 
-/* ===== KEYBOARD ===== */
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'&&fsMenu.classList.contains('open')){closeFS();return}
-  /* Gallery arrow key navigation */
-  if(e.key==='ArrowLeft'){
-    var galPane=document.getElementById('gallery');
-    var rect=galPane.getBoundingClientRect();
-    if(rect.top>=-100&&rect.bottom>=window.innerHeight*.3){
-      gGo((gIdx-1+slides.length)%slides.length);gReset();e.preventDefault();
-    }
-  }
-  if(e.key==='ArrowRight'){
-    var galPane2=document.getElementById('gallery');
-    var rect2=galPane2.getBoundingClientRect();
-    if(rect2.top>=-100&&rect2.bottom>=window.innerHeight*.3){
-      gGo((gIdx+1)%slides.length);gReset();e.preventDefault();
-    }
+/* keyboard */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { if (lb.classList.contains('open')) lbHide(); if (mobMenu.classList.contains('open')) closeMob(); }
+  if (lb.classList.contains('open')) {
+    if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+    if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
   }
 });
 
-/* ===== IMAGE PROTECTION ===== */
-document.querySelectorAll('.about-bg,.gal-slide,.chef-photo').forEach(function(el){
-  el.addEventListener('contextmenu',function(e){e.preventDefault()});
-  el.addEventListener('dragstart',function(e){e.preventDefault()})});
+/* image protection */
+document.querySelectorAll('.photo-band-inner,.gallery-item,.chef-photo,.lb-inner').forEach(function(el) {
+  el.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+  el.addEventListener('dragstart', function(e) { e.preventDefault(); });
+});
 
-/* ===== VISIBILITY ===== */
-document.addEventListener('visibilitychange',function(){if(document.hidden)clearInterval(gAuto);else gReset()});
-
-/* ===== TOAST NOTIFICATION ===== */
-var toastEl=document.getElementById('toast');
-var toastClose=document.getElementById('toastClose');
-var toastBar=document.getElementById('toastBar');
-var toastDuration=8000; /* visible duration */
-var toastTimer=null,toastBarTimer=null;
-function showToast(){
-  toastEl.classList.add('show');
-  toastBar.style.width='100%';
-  toastBar.style.transitionDuration='0s';
-  requestAnimationFrame(function(){
-    requestAnimationFrame(function(){
-      toastBar.style.transitionDuration=(toastDuration/1000)+'s';
-      toastBar.style.width='0%';
-    });
-  });
-  toastTimer=setTimeout(hideToast,toastDuration);
-}
-function hideToast(){
-  toastEl.classList.remove('show');
-  clearTimeout(toastTimer);
-}
-toastClose.addEventListener('click',hideToast);
-/* Show toast after 30 seconds */
-setTimeout(showToast,30000);
-
-/* ===== AUTO SCROLL (portfolio preview) ===== */
-var _isPreview=false;try{_isPreview=window.self!==window.top}catch(e){_isPreview=true}
-if(_isPreview){document.documentElement.style.scrollSnapType='none';
-  var _asY=0,_asSpd=2.25,_asPaused=false;
-  function _asRun(){if(!_asPaused){_asY+=_asSpd;var maxY=document.documentElement.scrollHeight-window.innerHeight;
-    if(_asY>=maxY){_asPaused=true;setTimeout(function(){_asY=0;window.scrollTo(0,0);_asPaused=false},800)}
-    else{window.scrollTo(0,_asY)}}requestAnimationFrame(_asRun)}
-  window.addEventListener('load',function(){setTimeout(_asRun,1200)});
+/* auto scroll (portfolio preview) */
+var _isPreview = false; try { _isPreview = window.self !== window.top; } catch(e) { _isPreview = true; }
+if (_isPreview) {
+  var _asY = 0, _asSpd = 2.25, _asPaused = false;
+  function _asRun() {
+    if (!_asPaused) {
+      _asY += _asSpd;
+      var maxY = document.documentElement.scrollHeight - window.innerHeight;
+      if (_asY >= maxY) { _asPaused = true; setTimeout(function() { _asY = 0; window.scrollTo(0, 0); _asPaused = false; }, 800); }
+      else { window.scrollTo(0, _asY); }
+    }
+    requestAnimationFrame(_asRun);
+  }
+  window.addEventListener('load', function() { setTimeout(_asRun, 1200); });
 }
 </script>
 </body>
