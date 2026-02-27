@@ -48,6 +48,172 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 ::-webkit-scrollbar{width:0}
 
 /* ================================================================
+   PRELOADER
+   ================================================================ */
+.preloader{
+  position:fixed;inset:0;z-index:9999;
+  background:#a07840;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transition:opacity .6s ease,visibility .6s ease;
+}
+.preloader.done{opacity:0;visibility:hidden;pointer-events:none}
+.preloader-brand{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(1.6rem,4vw,2.4rem);
+  letter-spacing:.2em;
+  opacity:0;
+  animation:plFadeIn .8s ease .3s forwards;
+}
+.preloader-sub{
+  font-size:12px;
+  letter-spacing:.2em;
+  color:rgba(255,255,255,.5);
+  margin-top:8px;
+  opacity:0;
+  animation:plFadeIn .8s ease .6s forwards;
+}
+.preloader-line{
+  width:80px;height:1px;
+  background:rgba(255,255,255,.25);
+  margin-top:28px;
+  position:relative;
+  overflow:hidden;
+}
+.preloader-line::after{
+  content:'';position:absolute;left:0;top:0;
+  width:100%;height:100%;
+  background:#fff;
+  transform:scaleX(0);transform-origin:left;
+  animation:plLine 1.8s ease .5s forwards;
+}
+@keyframes plFadeIn{to{opacity:1}}
+@keyframes plLine{to{transform:scaleX(1)}}
+
+/* ================================================================
+   SCROLL PROGRESS BAR
+   ================================================================ */
+.scroll-progress{
+  position:fixed;top:0;left:0;right:0;
+  height:1px;z-index:101;
+  background:rgba(255,255,255,.08);
+  pointer-events:none;
+}
+.scroll-progress-bar{
+  height:100%;
+  background:rgba(255,255,255,.5);
+  transform:scaleX(0);
+  transform-origin:left;
+  will-change:transform;
+}
+
+/* ================================================================
+   SECTION DOT NAVIGATOR
+   ================================================================ */
+.dot-nav{
+  position:fixed;right:28px;top:50%;transform:translateY(-50%);
+  z-index:95;display:flex;flex-direction:column;gap:16px;
+  opacity:0;transition:opacity .4s;
+}
+.dot-nav.visible{opacity:1}
+.dot-nav-item{
+  position:relative;
+  width:8px;height:8px;
+  display:flex;align-items:center;justify-content:center;
+}
+.dot-nav-dot{
+  width:6px;height:6px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.3);
+  background:transparent;
+  transition:all .3s;
+  cursor:pointer;
+  padding:0;
+}
+.dot-nav-dot.active{
+  background:#fff;
+  border-color:#fff;
+  transform:scale(1.3);
+}
+.dot-nav-label{
+  position:absolute;right:20px;
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(255,255,255,.6);white-space:nowrap;
+  opacity:0;transform:translateX(6px);
+  transition:all .3s;pointer-events:none;
+}
+.dot-nav-item:hover .dot-nav-label{opacity:1;transform:none}
+
+/* ================================================================
+   TOAST NOTIFICATION
+   ================================================================ */
+.toast{
+  position:fixed;bottom:100px;left:50%;transform:translateX(-50%) translateY(20px);
+  z-index:150;
+  background:rgba(60,40,15,.92);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.1);
+  padding:16px 44px 16px 20px;
+  max-width:380px;width:calc(100% - 40px);
+  opacity:0;pointer-events:none;
+  transition:all .5s ease;
+}
+.toast.show{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.toast-text{font-size:13px;color:rgba(255,255,255,.8);line-height:1.8;letter-spacing:.02em}
+.toast-close{
+  position:absolute;top:12px;right:14px;
+  font-size:14px;color:rgba(255,255,255,.35);
+  transition:color .3s;cursor:pointer;padding:4px;
+  background:none;border:none;font-family:inherit;
+}
+.toast-close:hover{color:#fff}
+
+/* ================================================================
+   REVIEWS / TESTIMONIALS
+   ================================================================ */
+.reviews{max-width:800px;margin:0 auto;text-align:center;overflow:hidden}
+.reviews-track{display:flex;transition:transform .6s ease}
+.review-slide{min-width:100%;padding:0 20px}
+.review-stars{
+  color:rgba(255,255,255,.4);
+  font-size:11px;letter-spacing:6px;
+  margin-bottom:24px;
+}
+.review-quote{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(1rem,2.5vw,1.35rem);
+  font-style:italic;font-weight:400;
+  line-height:2;
+  color:rgba(255,255,255,.75);
+  max-width:560px;margin:0 auto;
+}
+.review-author{
+  margin-top:24px;
+  font-size:12px;
+  letter-spacing:.12em;
+  color:rgba(255,255,255,.35);
+}
+.reviews-progress{
+  display:flex;gap:6px;justify-content:center;
+  margin-top:40px;
+}
+.reviews-dot{
+  width:24px;height:1px;
+  background:rgba(255,255,255,.15);
+  position:relative;overflow:hidden;
+  cursor:pointer;border:none;padding:0;
+}
+.reviews-dot::after{
+  content:'';position:absolute;left:0;top:0;
+  width:100%;height:100%;
+  background:#fff;
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .1s linear;
+}
+.reviews-dot.active::after{
+  animation:revProgress 6s linear forwards;
+}
+@keyframes revProgress{to{transform:scaleX(1)}}
+
+/* ================================================================
    HEADER — overlap style
    ================================================================ */
 .header{
@@ -550,6 +716,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
+  .preloader{display:none}
 }
 
 /* ================================================================
@@ -600,6 +767,9 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   .lb-inner{width:94vw;height:55vh}
   .lb-prev{left:8px}.lb-next{right:8px}
   .mob-menu a{font-size:1.3rem}
+  .dot-nav{display:none}
+  .toast{bottom:80px;max-width:none}
+  .review-quote{font-size:1rem}
 }
 
 @media(max-width:380px){
@@ -611,15 +781,29 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
    ================================================================ */
 @media print{
   *{background:transparent!important;color:#000!important;box-shadow:none!important}
-  .header,.kakao-float,.mob-bar,.back-top,.hero-scroll,.mob-menu{display:none!important}
+  .header,.kakao-float,.mob-bar,.back-top,.hero-scroll,.mob-menu,.preloader,.scroll-progress,.dot-nav,.toast{display:none!important}
   .hero{min-height:auto;padding:32px 0}
   .rv{opacity:1!important;transform:none!important}
   a[href]::after{content:" (" attr(href) ")";font-size:10px;color:#666}
   @page{margin:1.5cm}
 }
 </style>
+<noscript><style>
+  .preloader{display:none!important}
+  .rv{opacity:1!important;transform:none!important}
+  .scroll-progress,.dot-nav,.toast{display:none!important}
+  .reviews-track{flex-wrap:wrap}
+  .review-slide{min-width:100%}
+</style></noscript>
 </head>
 <body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-brand">LE CHEF</div>
+  <div class="preloader-sub">Fine Dining &middot; Hannam</div>
+  <div class="preloader-line"></div>
+</div>
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu">
@@ -644,6 +828,21 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   </nav>
   <button class="hbg" id="hbg" aria-label="메뉴" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollBar"></div></div>
+
+<!-- SECTION DOT NAVIGATOR -->
+<nav class="dot-nav" id="dotNav" aria-label="섹션 네비게이션">
+  <div class="dot-nav-item"><button class="dot-nav-dot" data-target="hero" aria-label="Hero"></button><span class="dot-nav-label">Home</span></div>
+  <div class="dot-nav-item"><button class="dot-nav-dot" data-target="about" aria-label="About"></button><span class="dot-nav-label">About</span></div>
+  <div class="dot-nav-item"><button class="dot-nav-dot" data-target="menu" aria-label="Menu"></button><span class="dot-nav-label">Menu</span></div>
+  <div class="dot-nav-item"><button class="dot-nav-dot" data-target="gallery" aria-label="Gallery"></button><span class="dot-nav-label">Photo</span></div>
+  <div class="dot-nav-item"><button class="dot-nav-dot" data-target="chef" aria-label="Chef"></button><span class="dot-nav-label">Chef</span></div>
+  <div class="dot-nav-item"><button class="dot-nav-dot" data-target="wine" aria-label="Wine"></button><span class="dot-nav-label">Wine</span></div>
+  <div class="dot-nav-item"><button class="dot-nav-dot" data-target="reviews" aria-label="Reviews"></button><span class="dot-nav-label">Reviews</span></div>
+  <div class="dot-nav-item"><button class="dot-nav-dot" data-target="info" aria-label="Info"></button><span class="dot-nav-label">Reservation</span></div>
+</nav>
 
 <!-- HERO -->
 <section class="hero" id="hero">
@@ -783,6 +982,38 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   </div>
 </section>
 
+<!-- REVIEWS -->
+<section class="section rv" id="reviews">
+  <div class="sec-label">Reviews</div>
+  <h2 class="sec-heading">게스트 리뷰</h2>
+
+  <div class="reviews">
+    <div class="reviews-track" id="revTrack">
+      <div class="review-slide">
+        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <p class="review-quote">&ldquo;코스 하나하나에 이야기가 담겨 있어서<br>단순한 식사가 아닌 경험이었습니다.&rdquo;</p>
+        <div class="review-author">김 &mdash; 2025.11</div>
+      </div>
+      <div class="review-slide">
+        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <p class="review-quote">&ldquo;한국 식재료가 이렇게 우아해질 수 있다는 걸<br>처음 알았습니다. 감동의 저녁이었어요.&rdquo;</p>
+        <div class="review-author">이 &mdash; 2025.10</div>
+      </div>
+      <div class="review-slide">
+        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <p class="review-quote">&ldquo;와인 페어링이 코스와 완벽하게 어우러져서<br>소믈리에의 세심함에 감탄했습니다.&rdquo;</p>
+        <div class="review-author">박 &mdash; 2026.01</div>
+      </div>
+      <div class="review-slide">
+        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <p class="review-quote">&ldquo;기념일마다 찾는 곳이 되었습니다.<br>매 시즌 새로운 메뉴가 기다려지는 유일한 레스토랑.&rdquo;</p>
+        <div class="review-author">최 &mdash; 2026.02</div>
+      </div>
+    </div>
+    <div class="reviews-progress" id="revDots"></div>
+  </div>
+</section>
+
 <!-- PHOTO BAND 3 -->
 <div class="photo-band rv">
   <div class="photo-band-inner pb3" data-hover="Private Room">
@@ -832,17 +1063,75 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 </a>
 <div class="mob-bar"><div class="mob-bar-inner"><a href="tel:02-000-0000" class="mb-line">전화</a><a href="https://pf.kakao.com/_zAqqX" class="mb-fill" target="_blank" rel="noopener noreferrer">예약하기</a></div></div>
 
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast" role="alert">
+  <div class="toast-text">2026 봄 시즌 메뉴가 시작되었습니다.</div>
+  <button class="toast-close" id="toastClose" aria-label="닫기">&times;</button>
+</div>
+
 <script>
 /* year */
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-/* header scroll */
+/* preloader */
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('preloader').classList.add('done');
+  }, 2500);
+});
+
+/* scroll progress bar + header scroll + scroll spy + dot nav */
 var header = document.getElementById('header');
 var backTop = document.getElementById('backTop');
+var scrollBar = document.getElementById('scrollBar');
+var dotNav = document.getElementById('dotNav');
+var dotBtns = document.querySelectorAll('.dot-nav-dot');
+var headerLinks = document.querySelectorAll('.header-link');
+var spySections = ['hero','about','menu','gallery','chef','wine','reviews','info'];
+var spyEls = spySections.map(function(id) { return document.getElementById(id); });
+
 window.addEventListener('scroll', function() {
-  header.classList.toggle('scrolled', window.scrollY > 80);
-  backTop.classList.toggle('visible', window.scrollY > 600);
+  var sy = window.scrollY;
+  header.classList.toggle('scrolled', sy > 80);
+  backTop.classList.toggle('visible', sy > 600);
+  dotNav.classList.toggle('visible', sy > 300);
+
+  /* scroll progress */
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  if (h > 0) scrollBar.style.transform = 'scaleX(' + (sy / h) + ')';
+
+  /* scroll spy */
+  var current = '';
+  for (var i = spyEls.length - 1; i >= 0; i--) {
+    if (spyEls[i] && spyEls[i].getBoundingClientRect().top <= 200) {
+      current = spySections[i];
+      break;
+    }
+  }
+
+  /* update header links active state */
+  headerLinks.forEach(function(link) {
+    var href = link.getAttribute('href');
+    if (href && href.substring(1) === current) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+
+  /* update dot nav active state */
+  dotBtns.forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.target === current);
+  });
 }, { passive: true });
+
+/* dot nav click */
+dotBtns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var t = document.getElementById(this.dataset.target);
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 
 /* mobile menu */
 var hbg = document.getElementById('hbg');
@@ -928,8 +1217,90 @@ document.querySelectorAll('.photo-band-inner,.gallery-item,.chef-photo,.lb-inner
   el.addEventListener('dragstart', function(e) { e.preventDefault(); });
 });
 
-/* auto scroll (portfolio preview) */
+/* reviews carousel */
+var revTrack = document.getElementById('revTrack');
+var revDotsEl = document.getElementById('revDots');
+var revSlides = revTrack.querySelectorAll('.review-slide');
+var revCount = revSlides.length;
+var revIdx = 0;
+var revInterval = null;
+var revPaused = false;
+
+/* build progress dots */
+for (var ri = 0; ri < revCount; ri++) {
+  var dot = document.createElement('button');
+  dot.className = 'reviews-dot' + (ri === 0 ? ' active' : '');
+  dot.setAttribute('aria-label', 'Review ' + (ri + 1));
+  dot.dataset.idx = ri;
+  dot.addEventListener('click', function() {
+    revGo(parseInt(this.dataset.idx));
+    revReset();
+  });
+  revDotsEl.appendChild(dot);
+}
+var revDotBtns = revDotsEl.querySelectorAll('.reviews-dot');
+
+function revGo(idx) {
+  revIdx = idx;
+  revTrack.style.transform = 'translateX(-' + (revIdx * 100) + '%)';
+  revDotBtns.forEach(function(d, i) {
+    d.classList.toggle('active', i === revIdx);
+  });
+}
+function revNext() {
+  if (!revPaused) revGo((revIdx + 1) % revCount);
+}
+function revReset() {
+  clearInterval(revInterval);
+  /* restart dot animation */
+  revDotBtns.forEach(function(d) {
+    d.classList.remove('active');
+  });
+  revDotBtns[revIdx].classList.add('active');
+  revInterval = setInterval(revNext, 6000);
+}
+revInterval = setInterval(revNext, 6000);
+
+/* reviews touch swipe */
+var revTx = 0;
+revTrack.addEventListener('touchstart', function(e) { revTx = e.touches[0].clientX; }, { passive: true });
+revTrack.addEventListener('touchend', function(e) {
+  var d = revTx - e.changedTouches[0].clientX;
+  if (Math.abs(d) > 40) {
+    revGo(d > 0 ? Math.min(revIdx + 1, revCount - 1) : Math.max(revIdx - 1, 0));
+    revReset();
+  }
+}, { passive: true });
+
+/* Page Visibility API — pause carousel when tab hidden */
+document.addEventListener('visibilitychange', function() {
+  if (document.hidden) {
+    revPaused = true;
+    clearInterval(revInterval);
+  } else {
+    revPaused = false;
+    revReset();
+  }
+});
+
+/* preview detection (must be before toast) */
 var _isPreview = false; try { _isPreview = window.self !== window.top; } catch(e) { _isPreview = true; }
+
+/* toast notification */
+var toast = document.getElementById('toast');
+var toastTimer = null;
+if (!_isPreview) {
+  setTimeout(function() {
+    toast.classList.add('show');
+    toastTimer = setTimeout(function() { toast.classList.remove('show'); }, 8000);
+  }, 30000);
+}
+document.getElementById('toastClose').addEventListener('click', function() {
+  toast.classList.remove('show');
+  if (toastTimer) clearTimeout(toastTimer);
+});
+
+/* auto scroll (portfolio preview) */
 if (_isPreview) {
   var _asY = 0, _asSpd = 2.25, _asPaused = false;
   function _asRun() {
