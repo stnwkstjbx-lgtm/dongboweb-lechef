@@ -494,9 +494,9 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 }
 .menu-desc{
   font-size:12px;
-  color:rgba(255,255,255,.4);
-  flex:1;
-  margin:0 24px;
+  color:rgba(255,255,255,.35);
+  margin-top:6px;
+  line-height:1.8;
 }
 .menu-price{
   font-family:'Instrument Serif',serif;
@@ -504,11 +504,35 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   white-space:nowrap;
   color:rgba(255,255,255,.7);
 }
+.menu-course-price{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:24px 0 16px;
+  border-top:1px solid rgba(255,255,255,.12);
+  margin-top:8px;
+}
+.menu-course-label{
+  font-family:'Instrument Serif',serif;
+  font-size:1.1rem;
+  font-style:italic;
+}
+.menu-course-amount{
+  font-family:'Instrument Serif',serif;
+  font-size:1.3rem;
+  color:#e4c48d;
+  letter-spacing:.02em;
+}
+.menu-course-amount small{
+  font-size:.7rem;
+  color:rgba(255,255,255,.4);
+  margin-left:4px;
+  font-style:normal;
+}
 .menu-note{
   font-size:12px;
   color:rgba(255,255,255,.3);
   margin-top:32px;
   letter-spacing:.04em;
+  line-height:2;
 }
 
 /* ================================================================
@@ -841,7 +865,9 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   .section{padding:80px 20px}
   .photo-band{aspect-ratio:16/9;max-height:280px}
   .menu-item{flex-direction:column;gap:4px;align-items:flex-start}
-  .menu-desc{margin:4px 0;font-size:11px}
+  .menu-desc{margin:4px 0 0;font-size:11px}
+  .menu-course-price{padding:20px 0 12px}
+  .menu-course-amount{font-size:1.1rem}
   .gallery-grid{grid-template-columns:1fr;gap:3px}
   .gallery-item-wide{grid-column:auto;aspect-ratio:4/3}
   .gallery-overlay{display:none}
@@ -982,28 +1008,53 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 <section class="section rv" id="menu">
   <div class="sec-label">Course Menu</div>
   <h2 class="sec-heading">코스 메뉴</h2>
-  <p class="sec-body">계절마다 새로워지는 8코스 디너. 셰프가 엄선한 제철 식재료로 구성됩니다.</p>
+  <p class="sec-body">계절마다 새로워지는 코스 구성. 셰프가 엄선한 제철 식재료로 한 끼의 서사를 완성합니다.</p>
 
   <div class="menu-list">
-    <div class="menu-cat">Dinner Course</div>
-    <div class="menu-item"><div><div class="menu-name">아뮤즈 부쉬<span class="menu-name-en">Amuse-Bouche</span></div></div></div>
-    <div class="menu-item"><div><div class="menu-name">전채<span class="menu-name-en">Appetizer</span></div></div></div>
-    <div class="menu-item"><div><div class="menu-name">수프<span class="menu-name-en">Velouté</span></div></div></div>
-    <div class="menu-item"><div><div class="menu-name">생선 요리<span class="menu-name-en">Poisson</span></div></div></div>
-    <div class="menu-item"><div><div class="menu-name">그라니테<span class="menu-name-en">Granité</span></div></div></div>
-    <div class="menu-item"><div><div class="menu-name">메인 요리<span class="menu-name-en">Plat Principal</span></div></div></div>
-    <div class="menu-item"><div><div class="menu-name">치즈<span class="menu-name-en">Fromage</span></div></div></div>
-    <div class="menu-item"><div><div class="menu-name">디저트<span class="menu-name-en">Dessert & Petit Four</span></div></div><div class="menu-price">220,000</div></div>
+    <div class="menu-cat">Dinner Course · 8 Courses</div>
 
-    <div class="menu-cat">Lunch Course</div>
-    <div class="menu-item"><div><div class="menu-name">런치 코스<span class="menu-name-en">6-Course Lunch</span></div></div><div class="menu-price">150,000</div></div>
+    <div class="menu-item"><div><div class="menu-name">아뮤즈 부쉬<span class="menu-name-en">Amuse-Bouche</span></div><div class="menu-desc">셰프의 환영 인사. 계절 식재료의 첫 만남을 한 입에 담아.</div></div></div>
 
-    <div class="menu-cat">Pairing</div>
-    <div class="menu-item"><div><div class="menu-name">와인 페어링<span class="menu-name-en">Wine Pairing · 6 Glasses</span></div></div><div class="menu-price">120,000</div></div>
-    <div class="menu-item"><div><div class="menu-name">논알코올 페어링<span class="menu-name-en">Non-Alcoholic Pairing</span></div></div><div class="menu-price">60,000</div></div>
+    <div class="menu-item"><div><div class="menu-name">전채<span class="menu-name-en">Appetizer</span></div><div class="menu-desc">제주 방어 타르타르, 유자 비네그레트, 겨울 무 칩.</div></div></div>
+
+    <div class="menu-item"><div><div class="menu-name">수프<span class="menu-name-en">Velouté</span></div><div class="menu-desc">강원도 송이 벨루테, 트뤼플 오일, 밤 크럼블.</div></div></div>
+
+    <div class="menu-item"><div><div class="menu-name">생선 요리<span class="menu-name-en">Poisson</span></div><div class="menu-desc">근해 도미 뫼니에르, 브라운 버터, 케이퍼, 계절 채소.</div></div></div>
+
+    <div class="menu-item"><div><div class="menu-name">그라니테<span class="menu-name-en">Granité</span></div><div class="menu-desc">한라봉 그라니테. 코스 중반의 청량한 입가심.</div></div></div>
+
+    <div class="menu-item"><div><div class="menu-name">메인 요리<span class="menu-name-en">Plat Principal</span></div><div class="menu-desc">횡성 한우 안심 수비드, 레드와인 주, 뿌리채소 퓌레.</div></div></div>
+
+    <div class="menu-item"><div><div class="menu-name">치즈<span class="menu-name-en">Fromage</span></div><div class="menu-desc">프랑스 직수입 숙성 치즈 3종, 무화과 콩포트, 호두.</div></div></div>
+
+    <div class="menu-item"><div><div class="menu-name">디저트<span class="menu-name-en">Dessert & Petit Four</span></div><div class="menu-desc">발로나 쇼콜라 퐁당, 바닐라 글라스, 쁘띠 푸르 모듬.</div></div></div>
+
+    <div class="menu-course-price">
+      <span class="menu-course-label">디너 코스 (8 Courses)</span>
+      <span class="menu-course-amount">220,000<small>원</small></span>
+    </div>
+
+    <div class="menu-cat">Lunch Course · 6 Courses</div>
+
+    <div class="menu-item"><div><div class="menu-name">런치 코스<span class="menu-name-en">Amuse · Appetizer · Soup · Fish · Main · Dessert</span></div><div class="menu-desc">디너 코스를 압축한 6코스 구성. 토·일 점심에만 제공됩니다.</div></div></div>
+
+    <div class="menu-course-price">
+      <span class="menu-course-label">런치 코스 (6 Courses)</span>
+      <span class="menu-course-amount">150,000<small>원</small></span>
+    </div>
+
+    <div class="menu-cat">Wine Pairing</div>
+
+    <div class="menu-item"><div><div class="menu-name">와인 페어링<span class="menu-name-en">Sommelier's Selection · 6 Glasses</span></div><div class="menu-desc">소믈리에가 각 코스에 맞춰 엄선한 6잔. 샴페인부터 디저트 와인까지.</div></div><div class="menu-price">120,000</div></div>
+
+    <div class="menu-item"><div><div class="menu-name">논알코올 페어링<span class="menu-name-en">Non-Alcoholic · 6 Glasses</span></div><div class="menu-desc">과일 인퓨전, 콤부차, 허브 토닉 등 논알코올 6잔 구성.</div></div><div class="menu-price">60,000</div></div>
   </div>
 
-  <div class="menu-note">※ 메뉴는 계절과 식재료 수급에 따라 변경됩니다.</div>
+  <div class="menu-note">
+    ※ 코스 메뉴는 계절과 식재료 수급에 따라 변경됩니다.<br>
+    ※ 식재료 알레르기가 있으시면 예약 시 미리 알려주세요.<br>
+    ※ 콜키지 50,000원 (1병 기준)
+  </div>
 </section>
 
 <!-- GALLERY -->
