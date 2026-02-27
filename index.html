@@ -509,52 +509,47 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 .course-group.open .course-body{max-height:800px}
 
 .menu-item{
-  display:flex;justify-content:space-between;align-items:baseline;
-  padding:14px 0 14px 20px;
-  border-bottom:1px solid rgba(255,255,255,.04);
-  position:relative;
-  transition:color .4s cubic-bezier(.22,1,.36,1);
+  display:grid;
+  grid-template-columns:28px 1fr;
+  gap:0 12px;
+  padding:18px 0 18px 16px;
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
-.menu-item::after{
-  content:'';position:absolute;bottom:0;left:20px;right:0;
-  height:1px;background:rgba(228,196,141,.25);
-  transform:scaleX(0);transform-origin:left;
-  transition:transform .5s cubic-bezier(.22,1,.36,1);
-}
-.menu-item:hover::after{transform:scaleX(1)}
 .menu-num{
   font-family:'Instrument Serif',serif;
-  font-size:.75rem;color:rgba(255,255,255,.2);
-  font-style:italic;margin-right:14px;flex-shrink:0;
-  min-width:18px;
+  font-size:.7rem;color:rgba(255,255,255,.2);
+  font-style:italic;
+  grid-row:1/3;
+  padding-top:2px;
+}
+.menu-name-row{
+  display:flex;align-items:baseline;gap:12px;
 }
 .menu-name{
   font-family:'Instrument Serif',serif;
-  font-size:.95rem;
+  font-size:1rem;
   font-weight:400;
 }
 .menu-name-en{
-  display:block;
   font-family:'DM Sans',sans-serif;
   font-size:10px;
-  color:rgba(255,255,255,.3);
-  letter-spacing:.06em;
-  margin-top:2px;
+  color:rgba(255,255,255,.25);
+  letter-spacing:.08em;
   white-space:nowrap;
 }
 .menu-desc{
-  font-size:11px;
+  font-size:12px;
   color:rgba(255,255,255,.3);
-  margin-top:4px;
-  line-height:1.7;
-  font-style:italic;
+  margin-top:6px;
+  line-height:1.8;
+  grid-column:2;
 }
 .menu-price{
   font-family:'Instrument Serif',serif;
   font-size:.9rem;
   white-space:nowrap;
-  color:rgba(255,255,255,.6);
-  flex-shrink:0;
+  color:rgba(255,255,255,.5);
+  margin-left:auto;
 }
 .menu-note{
   font-size:12px;
@@ -895,13 +890,16 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   .hero::after{display:none}
   .section{padding:80px 20px}
   .photo-band{aspect-ratio:16/9;max-height:280px}
+  .course-head{padding:16px 0}
   .course-head-left{flex-direction:column;gap:2px}
   .course-title{font-size:1rem}
-  .course-price{font-size:1rem}
+  .course-price{font-size:.95rem}
   .course-icon{margin-left:10px}
-  .menu-item{padding:12px 0 12px 12px}
-  .menu-num{min-width:16px;font-size:.65rem;margin-right:10px}
-  .menu-desc{font-size:10px}
+  .menu-item{grid-template-columns:22px 1fr;gap:0 8px;padding:14px 0 14px 8px}
+  .menu-num{font-size:.6rem}
+  .menu-name{font-size:.9rem}
+  .menu-name-row{flex-wrap:wrap;gap:4px 10px}
+  .menu-desc{font-size:11px}
   .gallery-grid{grid-template-columns:1fr;gap:3px}
   .gallery-item-wide{grid-column:auto;aspect-ratio:4/3}
   .gallery-overlay{display:none}
@@ -1047,8 +1045,8 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <div class="menu-list">
 
     <!-- DINNER COURSE -->
-    <div class="course-group open">
-      <button class="course-head" aria-expanded="true">
+    <div class="course-group">
+      <button class="course-head" aria-expanded="false">
         <div class="course-head-left">
           <span class="course-title">디너 코스</span>
           <span class="course-sub">8 Courses</span>
@@ -1057,14 +1055,14 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
         <span class="course-icon"></span>
       </button>
       <div class="course-body">
-        <div class="menu-item"><span class="menu-num">01</span><div><div class="menu-name">아뮤즈 부쉬<span class="menu-name-en">Amuse-Bouche</span></div><div class="menu-desc">셰프의 환영 인사. 계절 식재료의 첫 만남을 한 입에 담아.</div></div></div>
-        <div class="menu-item"><span class="menu-num">02</span><div><div class="menu-name">전채<span class="menu-name-en">Appetizer</span></div><div class="menu-desc">제주 방어 타르타르, 유자 비네그레트, 겨울 무 칩.</div></div></div>
-        <div class="menu-item"><span class="menu-num">03</span><div><div class="menu-name">수프<span class="menu-name-en">Velouté</span></div><div class="menu-desc">강원도 송이 벨루테, 트뤼플 오일, 밤 크럼블.</div></div></div>
-        <div class="menu-item"><span class="menu-num">04</span><div><div class="menu-name">생선 요리<span class="menu-name-en">Poisson</span></div><div class="menu-desc">근해 도미 뫼니에르, 브라운 버터, 케이퍼, 계절 채소.</div></div></div>
-        <div class="menu-item"><span class="menu-num">05</span><div><div class="menu-name">그라니테<span class="menu-name-en">Granité</span></div><div class="menu-desc">한라봉 그라니테. 코스 중반의 청량한 입가심.</div></div></div>
-        <div class="menu-item"><span class="menu-num">06</span><div><div class="menu-name">메인 요리<span class="menu-name-en">Plat Principal</span></div><div class="menu-desc">횡성 한우 안심 수비드, 레드와인 주, 뿌리채소 퓌레.</div></div></div>
-        <div class="menu-item"><span class="menu-num">07</span><div><div class="menu-name">치즈<span class="menu-name-en">Fromage</span></div><div class="menu-desc">프랑스 직수입 숙성 치즈 3종, 무화과 콩포트, 호두.</div></div></div>
-        <div class="menu-item"><span class="menu-num">08</span><div><div class="menu-name">디저트<span class="menu-name-en">Dessert & Petit Four</span></div><div class="menu-desc">발로나 쇼콜라 퐁당, 바닐라 글라스, 쁘띠 푸르 모듬.</div></div></div>
+        <div class="menu-item"><span class="menu-num">01</span><div class="menu-name-row"><span class="menu-name">아뮤즈 부쉬</span><span class="menu-name-en">Amuse-Bouche</span></div><div class="menu-desc">셰프의 환영 인사. 계절 식재료의 첫 만남을 한 입에 담아.</div></div>
+        <div class="menu-item"><span class="menu-num">02</span><div class="menu-name-row"><span class="menu-name">전채</span><span class="menu-name-en">Appetizer</span></div><div class="menu-desc">제주 방어 타르타르, 유자 비네그레트, 겨울 무 칩.</div></div>
+        <div class="menu-item"><span class="menu-num">03</span><div class="menu-name-row"><span class="menu-name">수프</span><span class="menu-name-en">Velouté</span></div><div class="menu-desc">강원도 송이 벨루테, 트뤼플 오일, 밤 크럼블.</div></div>
+        <div class="menu-item"><span class="menu-num">04</span><div class="menu-name-row"><span class="menu-name">생선 요리</span><span class="menu-name-en">Poisson</span></div><div class="menu-desc">근해 도미 뫼니에르, 브라운 버터, 케이퍼, 계절 채소.</div></div>
+        <div class="menu-item"><span class="menu-num">05</span><div class="menu-name-row"><span class="menu-name">그라니테</span><span class="menu-name-en">Granité</span></div><div class="menu-desc">한라봉 그라니테. 코스 중반의 청량한 입가심.</div></div>
+        <div class="menu-item"><span class="menu-num">06</span><div class="menu-name-row"><span class="menu-name">메인 요리</span><span class="menu-name-en">Plat Principal</span></div><div class="menu-desc">횡성 한우 안심 수비드, 레드와인 주, 뿌리채소 퓌레.</div></div>
+        <div class="menu-item"><span class="menu-num">07</span><div class="menu-name-row"><span class="menu-name">치즈</span><span class="menu-name-en">Fromage</span></div><div class="menu-desc">프랑스 직수입 숙성 치즈 3종, 무화과 콩포트, 호두.</div></div>
+        <div class="menu-item"><span class="menu-num">08</span><div class="menu-name-row"><span class="menu-name">디저트</span><span class="menu-name-en">Dessert & Petit Four</span></div><div class="menu-desc">발로나 쇼콜라 퐁당, 바닐라 글라스, 쁘띠 푸르 모듬.</div></div>
       </div>
     </div>
 
@@ -1079,12 +1077,12 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
         <span class="course-icon"></span>
       </button>
       <div class="course-body">
-        <div class="menu-item"><span class="menu-num">01</span><div><div class="menu-name">아뮤즈 부쉬<span class="menu-name-en">Amuse-Bouche</span></div><div class="menu-desc">셰프의 한 입 인사. 디너와 다른 가벼운 구성.</div></div></div>
-        <div class="menu-item"><span class="menu-num">02</span><div><div class="menu-name">전채<span class="menu-name-en">Appetizer</span></div><div class="menu-desc">계절 해산물 세비체, 감귤 드레싱, 허브 오일.</div></div></div>
-        <div class="menu-item"><span class="menu-num">03</span><div><div class="menu-name">수프<span class="menu-name-en">Velouté</span></div><div class="menu-desc">고구마 벨루테, 사워크림, 베이컨 크럼블.</div></div></div>
-        <div class="menu-item"><span class="menu-num">04</span><div><div class="menu-name">생선 또는 육류<span class="menu-name-en">Main</span></div><div class="menu-desc">당일 입하 식재료에 따라 셰프가 결정합니다.</div></div></div>
-        <div class="menu-item"><span class="menu-num">05</span><div><div class="menu-name">프리 디저트<span class="menu-name-en">Pre-Dessert</span></div><div class="menu-desc">계절 과일 소르베 또는 그라니테.</div></div></div>
-        <div class="menu-item"><span class="menu-num">06</span><div><div class="menu-name">디저트<span class="menu-name-en">Dessert</span></div><div class="menu-desc">파티쉐 시그니처 디저트, 에스프레소, 쁘띠 푸르.</div></div></div>
+        <div class="menu-item"><span class="menu-num">01</span><div class="menu-name-row"><span class="menu-name">아뮤즈 부쉬</span><span class="menu-name-en">Amuse-Bouche</span></div><div class="menu-desc">셰프의 한 입 인사. 디너와 다른 가벼운 구성.</div></div>
+        <div class="menu-item"><span class="menu-num">02</span><div class="menu-name-row"><span class="menu-name">전채</span><span class="menu-name-en">Appetizer</span></div><div class="menu-desc">계절 해산물 세비체, 감귤 드레싱, 허브 오일.</div></div>
+        <div class="menu-item"><span class="menu-num">03</span><div class="menu-name-row"><span class="menu-name">수프</span><span class="menu-name-en">Velouté</span></div><div class="menu-desc">고구마 벨루테, 사워크림, 베이컨 크럼블.</div></div>
+        <div class="menu-item"><span class="menu-num">04</span><div class="menu-name-row"><span class="menu-name">생선 또는 육류</span><span class="menu-name-en">Main</span></div><div class="menu-desc">당일 입하 식재료에 따라 셰프가 결정합니다.</div></div>
+        <div class="menu-item"><span class="menu-num">05</span><div class="menu-name-row"><span class="menu-name">프리 디저트</span><span class="menu-name-en">Pre-Dessert</span></div><div class="menu-desc">계절 과일 소르베 또는 그라니테.</div></div>
+        <div class="menu-item"><span class="menu-num">06</span><div class="menu-name-row"><span class="menu-name">디저트</span><span class="menu-name-en">Dessert</span></div><div class="menu-desc">파티쉐 시그니처 디저트, 에스프레소, 쁘띠 푸르.</div></div>
       </div>
     </div>
 
@@ -1099,8 +1097,8 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
         <span class="course-icon"></span>
       </button>
       <div class="course-body">
-        <div class="menu-item"><span class="menu-num">·</span><div><div class="menu-name">와인 페어링<span class="menu-name-en">6 Glasses · Champagne to Dessert Wine</span></div><div class="menu-desc">소믈리에가 각 코스에 맞춰 엄선한 6잔. 샴페인부터 디저트 와인까지.</div></div></div>
-        <div class="menu-item"><span class="menu-num">·</span><div><div class="menu-name">논알코올 페어링<span class="menu-name-en">6 Glasses · Fruit Infusion & Kombucha</span></div><div class="menu-desc">과일 인퓨전, 콤부차, 허브 토닉 등 논알코올 6잔 구성.</div></div><div class="menu-price">60,000</div></div>
+        <div class="menu-item"><span class="menu-num">·</span><div class="menu-name-row"><span class="menu-name">와인 페어링</span><span class="menu-name-en">6 Glasses</span></div><div class="menu-desc">소믈리에가 각 코스에 맞춰 엄선한 6잔. 샴페인부터 디저트 와인까지.</div></div>
+        <div class="menu-item"><span class="menu-num">·</span><div class="menu-name-row"><span class="menu-name">논알코올 페어링</span><span class="menu-name-en">6 Glasses</span><span class="menu-price">60,000</span></div><div class="menu-desc">과일 인퓨전, 콤부차, 허브 토닉 등 논알코올 6잔 구성.</div></div>
       </div>
     </div>
 
