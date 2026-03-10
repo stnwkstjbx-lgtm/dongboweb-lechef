@@ -1261,6 +1261,8 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 </div>
 
 <script>
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+window.scrollTo(0,0);
 /* year */
 document.getElementById('yr').textContent = new Date().getFullYear();
 
