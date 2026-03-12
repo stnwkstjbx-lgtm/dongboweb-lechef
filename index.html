@@ -294,6 +294,8 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 .mob-menu.open a:nth-child(4){transition-delay:.2s}
 .mob-menu.open a:nth-child(5){transition-delay:.25s}
 .mob-menu.open a:nth-child(6){transition-delay:.3s}
+.mob-menu.open a:nth-child(7){transition-delay:.35s}
+.mob-menu.open a:nth-child(8){transition-delay:.4s}
 
 /* ================================================================
    HERO — large text, minimal
@@ -430,6 +432,16 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
    ================================================================ */
 .about{text-align:center}
 .about .sec-body{margin:0 auto}
+.about-keywords{
+  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+  margin-top:32px;
+}
+.about-keyword{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  padding:6px 16px;
+  border:1px solid rgba(255,255,255,.08);
+}
 
 /* ================================================================
    PHOTO BAND — full-width image
@@ -841,6 +853,444 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 .back-top:hover{border-color:#fff;color:#fff}
 
 /* ================================================================
+   MARQUEE TYPOGRAPHY BAND — NEW technique (전 13종 유일)
+   ================================================================ */
+.marquee-band{
+  padding:48px 0;overflow:hidden;
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  position:relative;
+}
+.marquee-inner{
+  display:flex;gap:0;
+  animation:marqueeScroll 40s linear infinite;
+  width:max-content;
+  will-change:transform;
+}
+.marquee-band:hover .marquee-inner{animation-play-state:paused}
+.marquee-item{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(1.4rem,3vw,2.4rem);
+  font-style:italic;
+  color:rgba(255,255,255,.2);
+  white-space:nowrap;
+  padding:0 60px;
+  letter-spacing:.04em;
+}
+.marquee-sep{
+  color:rgba(255,255,255,.1);
+  font-size:clamp(1rem,2vw,1.6rem);
+  align-self:center;
+  padding:0 20px;
+}
+@keyframes marqueeScroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+/* ================================================================
+   ABOUT STATS — counter animation
+   ================================================================ */
+.about-stats{
+  display:flex;justify-content:center;gap:64px;
+  margin-top:48px;
+  padding-top:48px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.about-stat{text-align:center}
+.about-stat-num{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:400;
+  line-height:1;
+  color:#e4c48d;
+}
+.about-stat-label{
+  font-size:11px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.35);
+  margin-top:8px;
+}
+
+/* ================================================================
+   GALLERY STATS
+   ================================================================ */
+.gal-stats{
+  display:flex;gap:48px;
+  margin-top:40px;
+  padding-top:32px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.gal-stat{text-align:left}
+.gal-stat-num{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(1.4rem,2.5vw,2rem);
+  color:#e4c48d;
+  line-height:1;
+}
+.gal-stat-label{
+  font-size:11px;
+  color:rgba(255,255,255,.3);
+  letter-spacing:.08em;
+  margin-top:6px;
+}
+
+/* ================================================================
+   DINING EXPERIENCE — timeline
+   ================================================================ */
+.dining-exp{text-align:center}
+.exp-timeline{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:24px;
+  margin-top:56px;
+  position:relative;
+}
+.exp-timeline::before{
+  content:'';position:absolute;
+  top:28px;left:10%;right:10%;
+  height:1px;background:rgba(255,255,255,.1);
+}
+.exp-step{position:relative;text-align:center}
+.exp-num{
+  width:56px;height:56px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+  font-family:'Instrument Serif',serif;
+  font-size:1.1rem;font-style:italic;
+  color:rgba(255,255,255,.4);
+  background:rgba(160,120,64,.3);
+  position:relative;z-index:1;
+}
+.exp-title{
+  font-family:'Instrument Serif',serif;
+  font-size:1rem;font-weight:400;
+  margin-bottom:6px;
+}
+.exp-desc{
+  font-size:12px;
+  color:rgba(255,255,255,.4);
+  line-height:1.8;
+}
+
+/* ================================================================
+   PRIVATE DINING
+   ================================================================ */
+.private{position:relative;overflow:hidden}
+.private-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  min-height:480px;
+}
+.private-photo{
+  background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80') center/cover no-repeat;
+  position:relative;
+}
+.private-photo::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,transparent 60%,rgba(100,72,32,.95));
+}
+.private-content{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:64px 48px;
+  background:rgba(100,72,32,.95);
+}
+.private-list{
+  margin-top:32px;
+  display:flex;flex-direction:column;gap:16px;
+}
+.private-item{
+  display:flex;justify-content:space-between;
+  padding-bottom:12px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  font-size:13px;
+  color:rgba(255,255,255,.6);
+}
+.private-price{
+  font-family:'Instrument Serif',serif;
+  color:#e4c48d;
+  white-space:nowrap;
+}
+.private-note{
+  font-size:12px;color:rgba(255,255,255,.3);
+  margin-top:24px;line-height:2;
+  letter-spacing:.02em;
+}
+
+/* ================================================================
+   AWARDS & RECOGNITION
+   ================================================================ */
+.awards{text-align:center}
+.awards-grid{
+  display:flex;justify-content:center;gap:64px;
+  margin-top:48px;flex-wrap:wrap;
+}
+.award-item{text-align:center;max-width:180px}
+.award-icon{
+  font-family:'Instrument Serif',serif;
+  font-size:2.4rem;font-style:italic;
+  color:rgba(255,255,255,.15);
+  line-height:1;margin-bottom:16px;
+}
+.award-title{
+  font-family:'Instrument Serif',serif;
+  font-size:1rem;font-weight:400;
+  margin-bottom:4px;
+}
+.award-sub{
+  font-size:11px;
+  color:rgba(255,255,255,.35);
+  letter-spacing:.08em;
+}
+
+/* ================================================================
+   CTA BANNER
+   ================================================================ */
+.cta-banner{
+  position:relative;
+  padding:100px 48px;
+  text-align:center;
+  overflow:hidden;
+  background:rgba(80,56,24,.4);
+}
+.cta-watermark{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(6rem,18vw,14rem);
+  color:rgba(255,255,255,.03);
+  white-space:nowrap;
+  pointer-events:none;
+  letter-spacing:.08em;
+}
+.cta-inner{position:relative;z-index:1}
+.cta-inner .sec-label{margin-bottom:16px}
+.cta-heading{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(1.4rem,3vw,2.2rem);
+  font-weight:400;
+  margin-bottom:16px;
+  line-height:1.4;
+  letter-spacing:.02em;
+}
+.cta-sub{
+  font-size:13px;color:rgba(255,255,255,.5);
+  max-width:440px;margin:0 auto 36px;
+  line-height:2;
+}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-btn{
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  padding:14px 36px;
+  border:1px solid rgba(255,255,255,.3);
+  transition:all .4s cubic-bezier(.22,1,.36,1);
+}
+.cta-btn:hover{background:#fff;color:#a07840;border-color:#fff}
+.cta-btn-fill{background:#fff;color:#a07840;border:1px solid #fff}
+.cta-btn-fill:hover{background:transparent;color:#fff}
+.cta-trust{
+  margin-top:28px;
+  font-size:11px;color:rgba(255,255,255,.2);
+  letter-spacing:.08em;
+}
+
+/* ================================================================
+   FAQ — accordion
+   ================================================================ */
+.faq-list{margin-top:48px;max-width:720px}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.06)}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 0;cursor:pointer;
+  font-size:14px;font-weight:400;
+  color:rgba(255,255,255,.75);
+  width:100%;background:none;text-align:left;
+  font-family:inherit;transition:color .3s;
+}
+.faq-q:hover{color:#e4c48d}
+.faq-icon{
+  width:14px;height:14px;flex-shrink:0;position:relative;margin-left:16px;
+}
+.faq-icon::before,.faq-icon::after{
+  content:'';position:absolute;background:rgba(255,255,255,.3);
+  transition:all .4s cubic-bezier(.22,1,.36,1);
+}
+.faq-icon::before{width:12px;height:1px;top:50%;left:50%;transform:translate(-50%,-50%)}
+.faq-icon::after{width:1px;height:12px;top:50%;left:50%;transform:translate(-50%,-50%)}
+.faq-item.open .faq-icon::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+.faq-item.open .faq-q{color:#e4c48d}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .5s cubic-bezier(.22,1,.36,1);
+}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-inner{
+  padding:0 0 20px;
+  font-size:13px;color:rgba(255,255,255,.4);
+  line-height:2.2;
+}
+
+/* ================================================================
+   INSTAGRAM SECTION
+   ================================================================ */
+.insta{text-align:center}
+.insta-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:4px;
+  margin-top:48px;
+}
+.insta-item{
+  aspect-ratio:1;overflow:hidden;position:relative;
+  cursor:pointer;
+}
+.insta-item-inner{
+  width:100%;height:100%;
+  transition:transform .6s cubic-bezier(.22,1,.36,1);
+  will-change:transform;
+}
+.insta-item:hover .insta-item-inner{transform:scale(1.06)}
+.insta-overlay{
+  position:absolute;inset:0;
+  background:rgba(80,56,24,.6);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .4s;
+  pointer-events:none;
+}
+.insta-item:hover .insta-overlay{opacity:1}
+.insta-overlay-icon{
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.7);
+}
+.insta-handle{
+  margin-top:28px;
+  font-size:13px;color:rgba(255,255,255,.4);
+  letter-spacing:.06em;
+}
+.insta-handle a{color:rgba(255,255,255,.5);text-decoration:underline;text-underline-offset:3px}
+.insta-handle a:hover{color:#fff}
+
+/* ================================================================
+   REVIEW BADGE
+   ================================================================ */
+.review-badge{
+  display:inline-block;
+  font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(255,255,255,.25);
+  border:1px solid rgba(255,255,255,.1);
+  padding:3px 10px;
+  margin-bottom:16px;
+}
+
+/* ================================================================
+   CHEF ENHANCED — philosophy + awards
+   ================================================================ */
+.chef-philosophy{
+  text-align:center;
+  margin-bottom:56px;
+  max-width:560px;
+  margin-left:auto;margin-right:auto;
+}
+.chef-philosophy blockquote{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(1rem,2vw,1.3rem);
+  font-style:italic;
+  color:rgba(255,255,255,.5);
+  line-height:2;
+}
+.chef-philosophy cite{
+  display:block;margin-top:16px;
+  font-size:12px;color:rgba(255,255,255,.25);
+  letter-spacing:.1em;font-style:normal;
+}
+.chef-award{
+  font-size:10px;color:rgba(255,255,255,.3);
+  letter-spacing:.08em;
+  margin-top:6px;
+}
+
+/* ================================================================
+   WINE ENHANCED — sommelier note
+   ================================================================ */
+.wine-note{
+  margin-top:40px;padding-top:32px;
+  border-top:1px solid rgba(255,255,255,.08);
+  display:flex;gap:24px;align-items:flex-start;
+}
+.wine-note-icon{
+  font-family:'Instrument Serif',serif;
+  font-size:2rem;font-style:italic;
+  color:rgba(255,255,255,.15);
+  flex-shrink:0;line-height:1;
+}
+.wine-note-text{
+  font-size:13px;color:rgba(255,255,255,.4);
+  line-height:2;font-style:italic;
+}
+
+/* ================================================================
+   FOOTER ENHANCED
+   ================================================================ */
+.footer-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:48px;
+  padding:60px 48px 40px;
+  max-width:1100px;margin:0 auto;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.footer-col h5{
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);margin-bottom:16px;font-weight:400;
+}
+.footer-col p{font-size:13px;color:rgba(255,255,255,.45);line-height:2.2}
+.footer-social{display:flex;gap:16px;margin-top:12px}
+.footer-social a{
+  font-size:11px;color:rgba(255,255,255,.35);
+  letter-spacing:.08em;
+  transition:color .4s cubic-bezier(.22,1,.36,1);
+}
+.footer-social a:hover{color:#fff}
+.footer-bottom{
+  padding:20px 48px;
+  max-width:1100px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.footer-bottom-copy{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.04em}
+.footer-bottom-reg{font-size:10px;color:rgba(255,255,255,.12);letter-spacing:.02em}
+
+/* ================================================================
+   INFO ENHANCED
+   ================================================================ */
+.info-booking{
+  margin-top:48px;padding-top:32px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.info-booking-title{
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);margin-bottom:12px;
+}
+.info-booking-text{
+  font-size:13px;color:rgba(255,255,255,.4);line-height:2.4;
+}
+.info-detail{
+  display:flex;gap:32px;margin-top:24px;flex-wrap:wrap;
+}
+.info-detail-item{
+  font-size:12px;color:rgba(255,255,255,.3);
+  display:flex;align-items:center;gap:6px;
+  letter-spacing:.04em;
+}
+.info-detail-item::before{
+  content:'';width:4px;height:4px;border-radius:50%;
+  background:rgba(255,255,255,.2);flex-shrink:0;
+}
+
+/* ================================================================
    REVEAL (subtle)
    ================================================================ */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
@@ -851,10 +1301,38 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
    ================================================================ */
 *:focus{outline:none}
 *:focus-visible{outline:2px solid rgba(255,255,255,.5);outline-offset:3px}
+
+/* ================================================================
+   TOUCH ACTIVE STATES
+   ================================================================ */
+@media(hover:none){
+  .gallery-item:active .gallery-item-inner{transform:scale(1.02)}
+  .chef-card:active{transform:translateY(-2px)}
+  .insta-item:active .insta-item-inner{transform:scale(1.03)}
+  .wine-item:active::after{transform:scaleX(1)}
+  .cta-btn:active{opacity:.8}
+  .faq-q:active{color:#e4c48d}
+  .exp-num:active{border-color:rgba(255,255,255,.4)}
+  .award-item:active{opacity:.7}
+}
+
+/* ================================================================
+   PERFORMANCE — contain
+   ================================================================ */
+.photo-band,.gallery-item,.chef-card,.insta-item,.private-photo{
+  contain:layout style;
+}
+.marquee-band{contain:layout style paint}
+.about-stat-label,.award-sub,.chef-role,.chef-award,
+.exp-title,.private-price,.gal-stat-label,
+.info-detail-item,.footer-bottom-reg{white-space:nowrap}
+
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
   .preloader{display:none}
+  .marquee-inner{animation:none!important}
+  [data-count]{animation:none!important}
 }
 
 /* ================================================================
@@ -862,6 +1340,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
    ================================================================ */
 @media(min-width:1400px){
   .section{max-width:1200px}
+  .footer-grid,.footer-bottom{max-width:1200px}
 }
 
 /* ================================================================
@@ -871,6 +1350,15 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   .gallery-grid{grid-template-columns:1fr 1fr}
   .chef-grid{grid-template-columns:repeat(2,1fr)}
   .info-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .exp-timeline{grid-template-columns:repeat(3,1fr);gap:32px}
+  .exp-timeline::before{display:none}
+  .private-inner{grid-template-columns:1fr}
+  .private-photo{min-height:280px}
+  .private-photo::after{background:linear-gradient(180deg,transparent 40%,rgba(100,72,32,.95))}
+  .awards-grid{gap:40px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .insta-grid{grid-template-columns:repeat(3,1fr)}
+  .insta-grid .insta-item:nth-child(n+7){display:none}
 }
 @media(max-width:1024px)and(min-width:769px){
   .header{padding:20px 36px}
@@ -903,12 +1391,33 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   .gallery-grid{grid-template-columns:1fr;gap:3px}
   .gallery-item-wide{grid-column:auto;aspect-ratio:4/3}
   .gallery-overlay{display:none}
+  .gallery-cap{display:block;font-size:11px;color:rgba(255,255,255,.3);padding:8px 0;letter-spacing:.04em}
+  .gal-stats{flex-direction:column;gap:20px}
   .chef-grid{grid-template-columns:1fr;max-width:360px;margin:48px auto 0}
+  .chef-philosophy{margin-bottom:36px}
   .wine-item{flex-direction:column;gap:4px}
+  .wine-note{flex-direction:column;gap:12px}
   .info-grid{grid-template-columns:1fr;gap:24px}
   .info-btns{flex-direction:column}
   .info-btn{text-align:center}
-  .footer{flex-direction:column;gap:12px;text-align:center;padding:24px 20px calc(80px + env(safe-area-inset-bottom))}
+  .info-detail{flex-direction:column;gap:8px}
+  .about-stats{flex-wrap:wrap;gap:32px}
+  .exp-timeline{grid-template-columns:1fr 1fr;gap:28px}
+  .exp-timeline::before{display:none}
+  .private-inner{grid-template-columns:1fr}
+  .private-photo{min-height:220px}
+  .private-photo::after{background:linear-gradient(180deg,transparent 30%,rgba(100,72,32,.95))}
+  .private-content{padding:40px 20px}
+  .awards-grid{gap:28px;flex-direction:column;align-items:center}
+  .cta-banner{padding:80px 20px}
+  .cta-btns{flex-direction:column;align-items:center}
+  .cta-btn{width:100%;max-width:280px;text-align:center}
+  .faq-list{max-width:none}
+  .faq-q{font-size:13px}
+  .insta-grid{grid-template-columns:repeat(2,1fr)}
+  .insta-grid .insta-item:nth-child(n+5){display:none}
+  .footer-grid{grid-template-columns:1fr;gap:24px;padding:40px 20px}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center;padding:16px 20px calc(80px + env(safe-area-inset-bottom))}
   .kakao-float{display:none}
   .mob-bar{display:block}
   .lb-inner{width:94vw;height:55vh}
@@ -917,10 +1426,14 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   .dot-nav{display:none}
   .toast{bottom:80px;max-width:none}
   .review-quote{font-size:1rem}
+  .marquee-band{padding:32px 0}
+  .marquee-item{padding:0 32px;font-size:1.1rem}
 }
 
 @media(max-width:380px){
   .hero-title{font-size:1.6rem}
+  .about-stats{gap:20px}
+  .exp-timeline{grid-template-columns:1fr}
 }
 
 /* ================================================================
@@ -928,7 +1441,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
    ================================================================ */
 @media print{
   *{background:transparent!important;color:#000!important;box-shadow:none!important}
-  .header,.kakao-float,.mob-bar,.back-top,.hero-scroll,.mob-menu,.preloader,.scroll-progress,.dot-nav,.toast{display:none!important}
+  .header,.kakao-float,.mob-bar,.back-top,.hero-scroll,.mob-menu,.preloader,.scroll-progress,.dot-nav,.toast,.marquee-band,.insta{display:none!important}
   .hero{min-height:auto;padding:32px 0}
   .rv{opacity:1!important;transform:none!important}
   a[href]::after{content:" (" attr(href) ")";font-size:10px;color:#666}
@@ -938,9 +1451,12 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 <noscript><style>
   .preloader{display:none!important}
   .rv{opacity:1!important;transform:none!important}
-  .scroll-progress,.dot-nav,.toast{display:none!important}
+  .scroll-progress,.dot-nav,.toast,.marquee-band{display:none!important}
   .reviews-track{flex-wrap:wrap}
   .review-slide{min-width:100%}
+  .faq-a{max-height:none!important}
+  .exp-timeline{display:block}
+  .exp-step{margin-bottom:16px}
 </style></noscript>
 </head>
 <body>
@@ -959,6 +1475,8 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <a href="#gallery" data-close>갤러리</a>
   <a href="#chef" data-close>셰프</a>
   <a href="#wine" data-close>와인</a>
+  <a href="#private" data-close>프라이빗</a>
+  <a href="#faq" data-close>FAQ</a>
   <a href="#info" data-close>예약</a>
 </div>
 
@@ -971,6 +1489,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
     <a class="header-link" href="#gallery">Photo</a>
     <a class="header-link" href="#chef">Chef</a>
     <a class="header-link" href="#wine">Wine</a>
+    <a class="header-link" href="#private">Private</a>
     <a class="header-cta" href="https://pf.kakao.com/_zAqqX" target="_blank" rel="noopener noreferrer">Reservation</a>
   </nav>
   <button class="hbg" id="hbg" aria-label="메뉴" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -988,6 +1507,8 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <div class="dot-nav-item"><button class="dot-nav-dot" data-target="chef" aria-label="Chef"></button><span class="dot-nav-label">Chef</span></div>
   <div class="dot-nav-item"><button class="dot-nav-dot" data-target="wine" aria-label="Wine"></button><span class="dot-nav-label">Wine</span></div>
   <div class="dot-nav-item"><button class="dot-nav-dot" data-target="reviews" aria-label="Reviews"></button><span class="dot-nav-label">Reviews</span></div>
+  <div class="dot-nav-item"><button class="dot-nav-dot" data-target="private" aria-label="Private"></button><span class="dot-nav-label">Private</span></div>
+  <div class="dot-nav-item"><button class="dot-nav-dot" data-target="faq" aria-label="FAQ"></button><span class="dot-nav-label">FAQ</span></div>
   <div class="dot-nav-item"><button class="dot-nav-dot" data-target="info" aria-label="Info"></button><span class="dot-nav-label">Reservation</span></div>
 </nav>
 
@@ -1003,6 +1524,28 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <a href="https://pf.kakao.com/_zAqqX" class="hero-reserve" target="_blank" rel="noopener noreferrer">Reservation</a>
   <div class="hero-scroll"><span class="hero-scroll-text">Scroll</span><div class="hero-scroll-line"></div></div>
 </section>
+
+<!-- MARQUEE TYPOGRAPHY BAND — NEW technique -->
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee-inner">
+    <span class="marquee-item">좋은 요리는 좋은 재료에서 시작됩니다</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">A Story on Every Plate</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">계절이 바뀌면 메뉴도 바뀝니다</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">Fine Dining, Hannam</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">좋은 요리는 좋은 재료에서 시작됩니다</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">A Story on Every Plate</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">계절이 바뀌면 메뉴도 바뀝니다</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">Fine Dining, Hannam</span>
+    <span class="marquee-sep">&middot;</span>
+  </div>
+</div>
 
 <!-- PHOTO BAND 1 -->
 <div class="photo-band rv">
@@ -1028,6 +1571,40 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
     매 시즌 새롭게 구성되는 코스를 통해
     한국 식재료의 가능성을 탐구합니다.
   </p>
+  <div class="sec-divider"></div>
+  <p class="sec-body">
+    매일 아침 직접 산지를 찾아 고른 식재료만을 사용합니다.
+    불필요한 장식을 걷어내고 재료 본연의 맛에 집중하며,
+    모든 소스와 육수는 당일 조리로 완성합니다.
+    한 끼에 담긴 정성이 곧 르쉐프의 약속입니다.
+  </p>
+
+  <div class="about-keywords rv">
+    <span class="about-keyword">French Technique</span>
+    <span class="about-keyword">Korean Ingredients</span>
+    <span class="about-keyword">Seasonal Menu</span>
+    <span class="about-keyword">20 Seats Only</span>
+    <span class="about-keyword">Open Kitchen</span>
+  </div>
+
+  <div class="about-stats rv">
+    <div class="about-stat">
+      <div class="about-stat-num" data-count="7">0</div>
+      <div class="about-stat-label">Years</div>
+    </div>
+    <div class="about-stat">
+      <div class="about-stat-num" data-count="20">0</div>
+      <div class="about-stat-label">Seats</div>
+    </div>
+    <div class="about-stat">
+      <div class="about-stat-num" data-count="8">0</div>
+      <div class="about-stat-label">Courses</div>
+    </div>
+    <div class="about-stat">
+      <div class="about-stat-num" data-count="4">0</div>
+      <div class="about-stat-label">Seasons</div>
+    </div>
+  </div>
 </section>
 
 <!-- PHOTO BAND 2 -->
@@ -1107,9 +1684,33 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <div class="menu-note">
     ※ 코스 메뉴는 계절과 식재료 수급에 따라 변경됩니다.<br>
     ※ 식재료 알레르기가 있으시면 예약 시 미리 알려주세요.<br>
-    ※ 콜키지 50,000원 (1병 기준)
+    ※ 콜키지 50,000원 (1병 기준)<br>
+    ※ 비건, 할랄, 글루텐프리 코스 사전 요청 가능<br>
+    ※ 런치 코스는 토 · 일요일에만 운영됩니다.
   </div>
 </section>
+
+<!-- SIGNATURE DISH BAND -->
+<div class="marquee-band" aria-hidden="true" style="border-top:none">
+  <div class="marquee-inner" style="animation-direction:reverse">
+    <span class="marquee-item">횡성 한우 안심 수비드</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">제주 방어 타르타르</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">강원도 송이 벨루테</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">발로나 쇼콜라 퐁당</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">횡성 한우 안심 수비드</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">제주 방어 타르타르</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">강원도 송이 벨루테</span>
+    <span class="marquee-sep">&middot;</span>
+    <span class="marquee-item">발로나 쇼콜라 퐁당</span>
+    <span class="marquee-sep">&middot;</span>
+  </div>
+</div>
 
 <!-- GALLERY -->
 <section class="section rv" id="gallery">
@@ -1117,14 +1718,61 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <h2 class="sec-heading">갤러리</h2>
 
   <div class="gallery-grid">
-    <div class="gallery-item gallery-item-wide gi1" data-cap="시그니처 코스"><div class="gallery-item-inner"></div><div class="gallery-overlay"><span class="gallery-overlay-cap">시그니처 코스</span><span class="gallery-overlay-view">View</span></div></div>
-    <div class="gallery-item gi2" data-cap="전채 플레이팅"><div class="gallery-item-inner"></div><div class="gallery-overlay"><span class="gallery-overlay-cap">전채 플레이팅</span><span class="gallery-overlay-view">View</span></div></div>
-    <div class="gallery-item gi3" data-cap="다이닝 공간"><div class="gallery-item-inner"></div><div class="gallery-overlay"><span class="gallery-overlay-cap">다이닝 공간</span><span class="gallery-overlay-view">View</span></div></div>
-    <div class="gallery-item gi4" data-cap="메인 디쉬"><div class="gallery-item-inner"></div><div class="gallery-overlay"><span class="gallery-overlay-cap">메인 디쉬</span><span class="gallery-overlay-view">View</span></div></div>
-    <div class="gallery-item gi5" data-cap="디저트"><div class="gallery-item-inner"></div><div class="gallery-overlay"><span class="gallery-overlay-cap">디저트</span><span class="gallery-overlay-view">View</span></div></div>
-    <div class="gallery-item gi6" data-cap="와인 셀렉션"><div class="gallery-item-inner"></div><div class="gallery-overlay"><span class="gallery-overlay-cap">와인 셀렉션</span><span class="gallery-overlay-view">View</span></div></div>
-    <div class="gallery-item gallery-item-wide gi7" data-cap="오픈 키친"><div class="gallery-item-inner"></div><div class="gallery-overlay"><span class="gallery-overlay-cap">오픈 키친</span><span class="gallery-overlay-view">View</span></div></div>
-    <div class="gallery-item gi8" data-cap="프라이빗 룸"><div class="gallery-item-inner"></div><div class="gallery-overlay"><span class="gallery-overlay-cap">프라이빗 룸</span><span class="gallery-overlay-view">View</span></div></div>
+    <div class="gallery-item gallery-item-wide gi1" data-cap="시그니처 코스">
+      <div class="gallery-item-inner"></div>
+      <div class="gallery-overlay"><span class="gallery-overlay-cap">시그니처 코스</span><span class="gallery-overlay-view">View</span></div>
+      <div class="gallery-cap">시그니처 코스</div>
+    </div>
+    <div class="gallery-item gi2" data-cap="전채 플레이팅">
+      <div class="gallery-item-inner"></div>
+      <div class="gallery-overlay"><span class="gallery-overlay-cap">전채 플레이팅</span><span class="gallery-overlay-view">View</span></div>
+      <div class="gallery-cap">전채 플레이팅</div>
+    </div>
+    <div class="gallery-item gi3" data-cap="다이닝 공간">
+      <div class="gallery-item-inner"></div>
+      <div class="gallery-overlay"><span class="gallery-overlay-cap">다이닝 공간</span><span class="gallery-overlay-view">View</span></div>
+      <div class="gallery-cap">다이닝 공간</div>
+    </div>
+    <div class="gallery-item gi4" data-cap="메인 디쉬">
+      <div class="gallery-item-inner"></div>
+      <div class="gallery-overlay"><span class="gallery-overlay-cap">메인 디쉬</span><span class="gallery-overlay-view">View</span></div>
+      <div class="gallery-cap">메인 디쉬</div>
+    </div>
+    <div class="gallery-item gi5" data-cap="디저트">
+      <div class="gallery-item-inner"></div>
+      <div class="gallery-overlay"><span class="gallery-overlay-cap">디저트</span><span class="gallery-overlay-view">View</span></div>
+      <div class="gallery-cap">디저트</div>
+    </div>
+    <div class="gallery-item gi6" data-cap="와인 셀렉션">
+      <div class="gallery-item-inner"></div>
+      <div class="gallery-overlay"><span class="gallery-overlay-cap">와인 셀렉션</span><span class="gallery-overlay-view">View</span></div>
+      <div class="gallery-cap">와인 셀렉션</div>
+    </div>
+    <div class="gallery-item gallery-item-wide gi7" data-cap="오픈 키친">
+      <div class="gallery-item-inner"></div>
+      <div class="gallery-overlay"><span class="gallery-overlay-cap">오픈 키친</span><span class="gallery-overlay-view">View</span></div>
+      <div class="gallery-cap">오픈 키친</div>
+    </div>
+    <div class="gallery-item gi8" data-cap="프라이빗 룸">
+      <div class="gallery-item-inner"></div>
+      <div class="gallery-overlay"><span class="gallery-overlay-cap">프라이빗 룸</span><span class="gallery-overlay-view">View</span></div>
+      <div class="gallery-cap">프라이빗 룸</div>
+    </div>
+  </div>
+
+  <div class="gal-stats rv">
+    <div class="gal-stat">
+      <div class="gal-stat-num" data-count="120">0</div>
+      <div class="gal-stat-label">메뉴 촬영 컷</div>
+    </div>
+    <div class="gal-stat">
+      <div class="gal-stat-num" data-count="24">0</div>
+      <div class="gal-stat-label">시즌 메뉴 기록</div>
+    </div>
+    <div class="gal-stat">
+      <div class="gal-stat-num" data-count="8">0</div>
+      <div class="gal-stat-label">공간 앵글</div>
+    </div>
   </div>
 </section>
 
@@ -1144,18 +1792,35 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <div class="sec-label">Chef</div>
   <h2 class="sec-heading">셰프 소개</h2>
 
+  <div class="chef-philosophy rv">
+    <blockquote>&ldquo;좋은 재료를 찾아 산지를 직접 걸으며,<br>그 계절에만 가능한 맛을 접시 위에 담습니다.&rdquo;</blockquote>
+    <cite>— 박준서, Head Chef</cite>
+  </div>
+
   <div class="chef-grid">
     <div class="chef-card">
       <div class="chef-photo cp1"><div class="chef-photo-inner"></div></div>
-      <div class="chef-info"><h3>박준서</h3><div class="chef-role">Head Chef · Founder</div></div>
+      <div class="chef-info">
+        <h3>박준서</h3>
+        <div class="chef-role">Head Chef · Founder</div>
+        <div class="chef-award">Le Cordon Bleu Paris · 前 L'Ambroisie</div>
+      </div>
     </div>
     <div class="chef-card">
       <div class="chef-photo cp2"><div class="chef-photo-inner"></div></div>
-      <div class="chef-info"><h3>김하율</h3><div class="chef-role">Pâtissier</div></div>
+      <div class="chef-info">
+        <h3>김하율</h3>
+        <div class="chef-role">Pâtissier</div>
+        <div class="chef-award">前 Pierre Hermé · 디저트 스페셜리스트</div>
+      </div>
     </div>
     <div class="chef-card">
       <div class="chef-photo cp3"><div class="chef-photo-inner"></div></div>
-      <div class="chef-info"><h3>이서준</h3><div class="chef-role">Sommelier</div></div>
+      <div class="chef-info">
+        <h3>이서준</h3>
+        <div class="chef-role">Sommelier</div>
+        <div class="chef-award">WSET Level 4 · 한국소믈리에대회 수상</div>
+      </div>
     </div>
   </div>
 </section>
@@ -1167,10 +1832,24 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <p class="sec-body">소믈리에가 코스에 맞춰 엄선한 와인을 잔 단위로 제안합니다.</p>
 
   <div class="wine-list">
-    <div class="wine-item"><div><div class="wine-name">Dom Pérignon</div><div class="wine-detail">Champagne · France</div></div><div class="wine-price">Glass 48,000</div></div>
-    <div class="wine-item"><div><div class="wine-name">Chablis Premier Cru</div><div class="wine-detail">Bourgogne Blanc · France</div></div><div class="wine-price">Glass 32,000</div></div>
-    <div class="wine-item"><div><div class="wine-name">Château Margaux</div><div class="wine-detail">Bordeaux Rouge · France</div></div><div class="wine-price">Glass 55,000</div></div>
-    <div class="wine-item"><div><div class="wine-name">Barolo Riserva</div><div class="wine-detail">Piemonte · Italy</div></div><div class="wine-price">Glass 38,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Dom Pérignon</div><div class="wine-detail">Champagne · France · NV</div></div><div class="wine-price">Glass 48,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Krug Grande Cuvée</div><div class="wine-detail">Champagne · France · NV</div></div><div class="wine-price">Glass 62,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Chablis Premier Cru</div><div class="wine-detail">Bourgogne Blanc · France · 2020</div></div><div class="wine-price">Glass 32,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Sancerre</div><div class="wine-detail">Loire Valley · France · 2021</div></div><div class="wine-price">Glass 28,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Château Margaux</div><div class="wine-detail">Bordeaux Rouge · France · 2016</div></div><div class="wine-price">Glass 55,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Barolo Riserva</div><div class="wine-detail">Piemonte · Italy · 2017</div></div><div class="wine-price">Glass 38,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Amarone della Valpolicella</div><div class="wine-detail">Veneto · Italy · 2018</div></div><div class="wine-price">Glass 42,000</div></div>
+    <div class="wine-item"><div><div class="wine-name">Nuits-Saint-Georges</div><div class="wine-detail">Bourgogne Rouge · France · 2019</div></div><div class="wine-price">Glass 45,000</div></div>
+  </div>
+
+  <div class="wine-note rv">
+    <div class="wine-note-icon">&ldquo;</div>
+    <div class="wine-note-text">
+      코스마다 어울리는 와인을 한 잔씩 제안드립니다.<br>
+      소믈리에가 직접 각 디쉬의 풍미와 조화를 설명해 드리며,<br>
+      논알코올 페어링도 동일한 정성으로 준비합니다.
+      <br>— 이서준, Sommelier
+    </div>
   </div>
 </section>
 
@@ -1182,27 +1861,78 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <div class="reviews">
     <div class="reviews-track" id="revTrack">
       <div class="review-slide">
+        <div class="review-badge">디너 코스</div>
         <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
         <p class="review-quote">&ldquo;코스 하나하나에 이야기가 담겨 있어서<br>단순한 식사가 아닌 경험이었습니다.&rdquo;</p>
         <div class="review-author">김 &mdash; 2025.11</div>
       </div>
       <div class="review-slide">
+        <div class="review-badge">디너 코스</div>
         <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
         <p class="review-quote">&ldquo;한국 식재료가 이렇게 우아해질 수 있다는 걸<br>처음 알았습니다. 감동의 저녁이었어요.&rdquo;</p>
         <div class="review-author">이 &mdash; 2025.10</div>
       </div>
       <div class="review-slide">
+        <div class="review-badge">와인 페어링</div>
         <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
         <p class="review-quote">&ldquo;와인 페어링이 코스와 완벽하게 어우러져서<br>소믈리에의 세심함에 감탄했습니다.&rdquo;</p>
         <div class="review-author">박 &mdash; 2026.01</div>
       </div>
       <div class="review-slide">
+        <div class="review-badge">기념일</div>
         <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
         <p class="review-quote">&ldquo;기념일마다 찾는 곳이 되었습니다.<br>매 시즌 새로운 메뉴가 기다려지는 유일한 레스토랑.&rdquo;</p>
         <div class="review-author">최 &mdash; 2026.02</div>
       </div>
+      <div class="review-slide">
+        <div class="review-badge">런치 코스</div>
+        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <p class="review-quote">&ldquo;런치 코스도 디너 못지않게 정성스러웠습니다.<br>주말마다 예약하고 싶은 곳.&rdquo;</p>
+        <div class="review-author">정 &mdash; 2026.02</div>
+      </div>
+      <div class="review-slide">
+        <div class="review-badge">프라이빗 다이닝</div>
+        <div class="review-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <p class="review-quote">&ldquo;프라이빗 룸에서의 프러포즈가 완벽했습니다.<br>셰프의 축하 디저트까지, 잊지 못할 밤이었어요.&rdquo;</p>
+        <div class="review-author">한 &mdash; 2026.03</div>
+      </div>
     </div>
     <div class="reviews-progress" id="revDots"></div>
+  </div>
+</section>
+
+<!-- DINING EXPERIENCE -->
+<section class="section dining-exp rv" id="experience" aria-label="다이닝 경험">
+  <div class="sec-label">Experience</div>
+  <h2 class="sec-heading">다이닝 경험</h2>
+  <p class="sec-body" style="margin:0 auto">처음 방문하시는 분들을 위해, 르쉐프에서의 한 저녁이 어떻게 흘러가는지 안내합니다.</p>
+
+  <div class="exp-timeline">
+    <div class="exp-step rv">
+      <div class="exp-num">01</div>
+      <div class="exp-title">예약 확인</div>
+      <div class="exp-desc">카카오톡 또는 전화로<br>예약을 확인합니다</div>
+    </div>
+    <div class="exp-step rv">
+      <div class="exp-num">02</div>
+      <div class="exp-title">웰컴 드링크</div>
+      <div class="exp-desc">자리 안내 후<br>셰프의 환영 한 잔</div>
+    </div>
+    <div class="exp-step rv">
+      <div class="exp-num">03</div>
+      <div class="exp-title">코스 시작</div>
+      <div class="exp-desc">계절 코스 8품<br>약 2시간 30분</div>
+    </div>
+    <div class="exp-step rv">
+      <div class="exp-num">04</div>
+      <div class="exp-title">디저트 & 프티푸르</div>
+      <div class="exp-desc">파티쉐의 시그니처<br>디저트와 소과자</div>
+    </div>
+    <div class="exp-step rv">
+      <div class="exp-num">05</div>
+      <div class="exp-title">셰프 인사</div>
+      <div class="exp-desc">식사 후 셰프가 직접<br>인사를 드립니다</div>
+    </div>
   </div>
 </section>
 
@@ -1211,6 +1941,155 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <div class="photo-band-inner pb3" data-hover="Private Room">
   </div>
 </div>
+
+<!-- PRIVATE DINING -->
+<section class="section-wide private rv" id="private">
+  <div class="private-inner">
+    <div class="private-photo"></div>
+    <div class="private-content">
+      <div class="sec-label">Private Dining</div>
+      <h2 class="sec-heading">프라이빗 다이닝</h2>
+      <p class="sec-body">
+        특별한 날을 위한 독립된 공간을 준비했습니다.<br>
+        프러포즈, 기념일, 비즈니스 미팅까지<br>
+        맞춤 메뉴와 데코레이션을 제안합니다.
+      </p>
+      <div class="private-list">
+        <div class="private-item"><span>프라이빗 룸 (2~6인)</span><span class="private-price">별도 문의</span></div>
+        <div class="private-item"><span>프러포즈 패키지</span><span class="private-price">+80,000</span></div>
+        <div class="private-item"><span>생일 케이크 & 데코</span><span class="private-price">+50,000</span></div>
+        <div class="private-item"><span>비즈니스 미팅 (8~12인)</span><span class="private-price">별도 문의</span></div>
+      </div>
+      <div class="private-note">
+        ※ 프라이빗 다이닝은 3일 전 예약 필수<br>
+        ※ 맞춤 메뉴 구성 가능 (알레르기, 비건 등)<br>
+        ※ 꽃, 케이크, 메시지 카드 등 데코레이션 사전 준비<br>
+        ※ 프로젝터 · 음향 장비 이용 가능 (비즈니스 미팅)
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section class="section awards rv" id="awards" aria-label="수상 이력">
+  <div class="sec-label">Recognition</div>
+  <h2 class="sec-heading">수상 & 인증</h2>
+
+  <div class="awards-grid">
+    <div class="award-item rv">
+      <div class="award-icon">M</div>
+      <div class="award-title">미쉐린 가이드</div>
+      <div class="award-sub">서울 2025 · 1 Star</div>
+    </div>
+    <div class="award-item rv">
+      <div class="award-icon">G</div>
+      <div class="award-title">고메 다이닝 어워드</div>
+      <div class="award-sub">Best New Restaurant 2020</div>
+    </div>
+    <div class="award-item rv">
+      <div class="award-icon">W</div>
+      <div class="award-title">와인 스펙테이터</div>
+      <div class="award-sub">Award of Excellence 2024</div>
+    </div>
+    <div class="award-item rv">
+      <div class="award-icon">B</div>
+      <div class="award-title">블루리본 서베이</div>
+      <div class="award-sub">리본 3개 · 2023 – 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner rv" aria-label="예약 안내">
+  <div class="cta-watermark" aria-hidden="true">LE CHEF</div>
+  <div class="cta-inner">
+    <div class="sec-label">Reservation</div>
+    <h2 class="cta-heading">접시 위의 계절을<br>경험해 보세요.</h2>
+    <p class="cta-sub">하루 20석, 단 두 번의 시팅. 온전한 미식 경험을 위해 사전 예약을 부탁드립니다.</p>
+    <div class="cta-btns">
+      <a href="https://pf.kakao.com/_zAqqX" class="cta-btn cta-btn-fill" target="_blank" rel="noopener noreferrer">예약하기</a>
+      <a href="tel:02-000-0000" class="cta-btn">전화 문의</a>
+    </div>
+    <div class="cta-trust">완전 예약제 · 미쉐린 1스타 · 발레 파킹</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section rv" id="faq">
+  <div class="sec-label">FAQ</div>
+  <h2 class="sec-heading">자주 묻는 질문</h2>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">예약은 어떻게 하나요?<span class="faq-icon"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">카카오톡 채널 또는 전화(02-000-0000)로 예약 가능합니다. 온라인 예약은 카카오톡 채널에서 날짜와 인원을 말씀해 주시면 안내드립니다.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">드레스 코드가 있나요?<span class="faq-icon"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">스마트 캐주얼을 권장합니다. 반바지, 슬리퍼, 운동복은 정중히 사양합니다. 편안하면서도 단정한 차림이면 충분합니다.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">알레르기가 있는데 괜찮을까요?<span class="faq-icon"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">예약 시 알레르기 정보를 미리 알려주시면 대체 메뉴를 준비합니다. 비건, 할랄 등 식이 제한도 사전 상담으로 대응 가능합니다.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">주차가 가능한가요?<span class="faq-icon"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">발레 파킹 서비스를 제공합니다. 레스토랑 입구에서 차량을 맡겨주시면 됩니다. 별도 비용은 없습니다.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">콜키지 비용은 얼마인가요?<span class="faq-icon"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">와인 1병 기준 50,000원입니다. 2병 이상 반입 시 사전 문의 부탁드립니다. 하우스 와인 리스트도 다양하게 준비되어 있습니다.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">어린이 동반이 가능한가요?<span class="faq-icon"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">10세 이상 동반 가능합니다. 프라이빗 룸 이용 시에는 연령 제한 없이 환영합니다. 아동용 메뉴는 사전 문의해 주세요.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">예약 취소는 언제까지 가능한가요?<span class="faq-icon"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">방문 2일 전(48시간)까지 무료 취소 가능합니다. 이후 취소 시 코스 금액의 50%가 취소 수수료로 발생합니다.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">기념일 이벤트를 요청할 수 있나요?<span class="faq-icon"></span></button>
+      <div class="faq-a"><div class="faq-a-inner">생일, 프러포즈, 결혼기념일 등 맞춤 이벤트를 준비해 드립니다. 예약 시 말씀해 주시면 케이크, 꽃, 메시지 카드 등을 세팅합니다.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="section insta rv" id="instagram">
+  <div class="sec-label">Instagram</div>
+  <h2 class="sec-heading">르쉐프의 일상</h2>
+
+  <div class="insta-grid">
+    <div class="insta-item">
+      <div class="insta-item-inner" style="background:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80') center/cover no-repeat"></div>
+      <div class="insta-overlay"><span class="insta-overlay-icon">View</span></div>
+    </div>
+    <div class="insta-item">
+      <div class="insta-item-inner" style="background:url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=80') center/cover no-repeat"></div>
+      <div class="insta-overlay"><span class="insta-overlay-icon">View</span></div>
+    </div>
+    <div class="insta-item">
+      <div class="insta-item-inner" style="background:url('https://images.unsplash.com/photo-1558030006-450675393462?w=400&q=80') center/cover no-repeat"></div>
+      <div class="insta-overlay"><span class="insta-overlay-icon">View</span></div>
+    </div>
+    <div class="insta-item">
+      <div class="insta-item-inner" style="background:url('https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&q=80') center/cover no-repeat"></div>
+      <div class="insta-overlay"><span class="insta-overlay-icon">View</span></div>
+    </div>
+    <div class="insta-item">
+      <div class="insta-item-inner" style="background:url('https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=400&q=80') center/cover no-repeat"></div>
+      <div class="insta-overlay"><span class="insta-overlay-icon">View</span></div>
+    </div>
+    <div class="insta-item">
+      <div class="insta-item-inner" style="background:url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&q=80') center/cover no-repeat"></div>
+      <div class="insta-overlay"><span class="insta-overlay-icon">View</span></div>
+    </div>
+  </div>
+  <div class="insta-handle">
+    <a href="https://instagram.com/lechef.official" target="_blank" rel="noopener noreferrer">@lechef.official</a>
+  </div>
+</section>
 
 <!-- INFO -->
 <section class="section rv" id="info">
@@ -1235,15 +2114,51 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
       <p>완전 예약제 · 20석 한정<br>시팅 2회 (18:00 / 20:30)<br>발레 파킹 · 콜키지 50,000</p>
     </div>
   </div>
+
+  <div class="info-booking rv">
+    <div class="info-booking-title">Booking Note</div>
+    <div class="info-booking-text">
+      예약 확정 후 방문 전날 카카오톡으로 리마인더를 보내드립니다.<br>
+      알레르기, 식이 제한, 기념일 정보를 미리 알려주시면 맞춤 서비스를 준비합니다.
+    </div>
+    <div class="info-detail">
+      <div class="info-detail-item">한남대교 북단 도보 3분</div>
+      <div class="info-detail-item">발레 파킹 무료</div>
+      <div class="info-detail-item">프라이빗 룸 2~6인</div>
+      <div class="info-detail-item">휠체어 접근 가능</div>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <a class="footer-logo" href="#">LE CHEF</a>
-  <span class="footer-copy">&copy; <span id="yr">2025</span> LE CHEF — Fine Dining, Hannam</span>
-  <div class="footer-links">
-    <a href="https://instagram.com/lechef.official" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="#hero" class="footer-link" id="footTop">Top ↑</a>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5>LE CHEF</h5>
+      <p>접시 위에 담긴 계절의 이야기.<br>서울 한남동 프렌치 파인다이닝.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/lechef.official" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://blog.naver.com/lechef" target="_blank" rel="noopener noreferrer">Blog</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Hours</h5>
+      <p>수 — 일 디너 18:00 – 23:00<br>토 · 일 런치 12:00 – 15:00<br>월 · 화 정기 휴무</p>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <p>서울 용산구 한남동 00-00<br>02-000-0000<br>info@lechef.kr</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-bottom-copy">
+      &copy; <span id="yr">2025</span> LE CHEF — Fine Dining, Hannam.
+      All rights reserved.
+    </span>
+    <a href="#hero" style="font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.1em;text-transform:uppercase" id="footTop">
+      Back to Top &uarr;
+    </a>
+    <span class="footer-bottom-reg">사업자등록번호 000-00-00000 · 대표 박준서</span>
   </div>
 </footer>
 
@@ -1256,7 +2171,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 
 <!-- TOAST NOTIFICATION -->
 <div class="toast" id="toast" role="alert">
-  <div class="toast-text">2026 봄 시즌 메뉴가 시작되었습니다.</div>
+  <div class="toast-text">완전 예약제 · 하루 20석 한정으로 운영됩니다.</div>
   <button class="toast-close" id="toastClose" aria-label="닫기">&times;</button>
 </div>
 
@@ -1280,7 +2195,7 @@ var scrollBar = document.getElementById('scrollBar');
 var dotNav = document.getElementById('dotNav');
 var dotBtns = document.querySelectorAll('.dot-nav-dot');
 var headerLinks = document.querySelectorAll('.header-link');
-var spySections = ['hero','about','menu','gallery','chef','wine','reviews','info'];
+var spySections = ['hero','about','menu','gallery','chef','wine','reviews','experience','private','awards','faq','instagram','info'];
 var spyEls = spySections.map(function(id) { return document.getElementById(id); });
 
 window.addEventListener('scroll', function() {
@@ -1434,7 +2349,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 /* image protection */
-document.querySelectorAll('.photo-band-inner,.gallery-item,.chef-photo,.lb-inner').forEach(function(el) {
+document.querySelectorAll('.photo-band-inner,.gallery-item,.chef-photo,.lb-inner,.private-photo,.insta-item').forEach(function(el) {
   el.addEventListener('contextmenu', function(e) { e.preventDefault(); });
   el.addEventListener('dragstart', function(e) { e.preventDefault(); });
 });
@@ -1503,6 +2418,52 @@ document.addEventListener('visibilitychange', function() {
     revPaused = false;
     revReset();
   }
+});
+
+/* ============================================================
+   COUNTER ANIMATION — 숫자 카운트업 (뷰포트 진입 시)
+   ============================================================ */
+var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var counterEls = document.querySelectorAll('[data-count]');
+var counterObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      var el = e.target;
+      var target = parseInt(el.dataset.count);
+      if (prefersReduced) { el.textContent = target; counterObs.unobserve(el); return; }
+      var start = 0;
+      var duration = 1600;
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(start + (target - start) * eased);
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+      counterObs.unobserve(el);
+    }
+  });
+}, { threshold: .3 });
+counterEls.forEach(function(el) { counterObs.observe(el); });
+
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+document.querySelectorAll('.faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = this.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(f) {
+      f.classList.remove('open');
+      f.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!wasOpen) {
+      item.classList.add('open');
+      this.setAttribute('aria-expanded', 'true');
+    }
+  });
 });
 
 /* preview detection (must be before toast) */
