@@ -853,39 +853,63 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 .back-top:hover{border-color:#fff;color:#fff}
 
 /* ================================================================
-   MARQUEE TYPOGRAPHY BAND — NEW technique (전 13종 유일)
+   PULL QUOTE BAND — NEW technique (전 13종 유일)
+   풀폭 에디토리얼 인용구. 스크롤 시 페이드인 + 약간의 스케일.
    ================================================================ */
-.marquee-band{
-  padding:48px 0;overflow:hidden;
-  border-top:1px solid rgba(255,255,255,.08);
-  border-bottom:1px solid rgba(255,255,255,.08);
+.pull-quote{
+  padding:120px 48px;
+  text-align:center;
   position:relative;
+  overflow:hidden;
 }
-.marquee-inner{
-  display:flex;gap:0;
-  animation:marqueeScroll 40s linear infinite;
-  width:max-content;
-  will-change:transform;
+.pull-quote::before{
+  content:'';position:absolute;
+  top:0;left:50%;transform:translateX(-50%);
+  width:40px;height:1px;
+  background:rgba(255,255,255,.15);
 }
-.marquee-band:hover .marquee-inner{animation-play-state:paused}
-.marquee-item{
+.pull-quote::after{
+  content:'';position:absolute;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:40px;height:1px;
+  background:rgba(255,255,255,.15);
+}
+.pull-quote-text{
   font-family:'Instrument Serif',serif;
-  font-size:clamp(1.4rem,3vw,2.4rem);
+  font-size:clamp(1.6rem,4.5vw,3.6rem);
+  font-weight:400;
   font-style:italic;
+  line-height:1.5;
+  color:rgba(255,255,255,.35);
+  max-width:900px;
+  margin:0 auto;
+  letter-spacing:.02em;
+  text-wrap:balance;
+  opacity:0;
+  transform:scale(.96);
+  transition:opacity 1.2s cubic-bezier(.22,1,.36,1),transform 1.2s cubic-bezier(.22,1,.36,1);
+}
+.pull-quote-text.show{
+  opacity:1;
+  transform:scale(1);
+}
+.pull-quote-cite{
+  display:block;
+  margin-top:32px;
+  font-family:'DM Sans',sans-serif;
+  font-size:11px;
+  font-style:normal;
+  letter-spacing:.25em;
+  text-transform:uppercase;
   color:rgba(255,255,255,.2);
-  white-space:nowrap;
-  padding:0 60px;
-  letter-spacing:.04em;
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .8s cubic-bezier(.22,1,.36,1) .4s,transform .8s cubic-bezier(.22,1,.36,1) .4s;
 }
-.marquee-sep{
-  color:rgba(255,255,255,.1);
-  font-size:clamp(1rem,2vw,1.6rem);
-  align-self:center;
-  padding:0 20px;
-}
-@keyframes marqueeScroll{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
+.pull-quote-text.show + .pull-quote-cite,
+.pull-quote-cite.show{
+  opacity:1;
+  transform:none;
 }
 
 /* ================================================================
@@ -1322,7 +1346,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 .photo-band,.gallery-item,.chef-card,.insta-item,.private-photo{
   contain:layout style;
 }
-.marquee-band{contain:layout style paint}
+.pull-quote{contain:layout style}
 .about-stat-label,.award-sub,.chef-role,.chef-award,
 .exp-title,.private-price,.gal-stat-label,
 .info-detail-item,.footer-bottom-reg{white-space:nowrap}
@@ -1331,7 +1355,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
   .preloader{display:none}
-  .marquee-inner{animation:none!important}
+  .pull-quote-text{opacity:1!important;transform:none!important}
   [data-count]{animation:none!important}
 }
 
@@ -1426,8 +1450,8 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   .dot-nav{display:none}
   .toast{bottom:80px;max-width:none}
   .review-quote{font-size:1rem}
-  .marquee-band{padding:32px 0}
-  .marquee-item{padding:0 32px;font-size:1.1rem}
+  .pull-quote{padding:80px 20px}
+  .pull-quote-text{font-size:clamp(1.3rem,6vw,2rem)}
 }
 
 @media(max-width:380px){
@@ -1441,7 +1465,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
    ================================================================ */
 @media print{
   *{background:transparent!important;color:#000!important;box-shadow:none!important}
-  .header,.kakao-float,.mob-bar,.back-top,.hero-scroll,.mob-menu,.preloader,.scroll-progress,.dot-nav,.toast,.marquee-band,.insta{display:none!important}
+  .header,.kakao-float,.mob-bar,.back-top,.hero-scroll,.mob-menu,.preloader,.scroll-progress,.dot-nav,.toast,.insta{display:none!important}
   .hero{min-height:auto;padding:32px 0}
   .rv{opacity:1!important;transform:none!important}
   a[href]::after{content:" (" attr(href) ")";font-size:10px;color:#666}
@@ -1451,7 +1475,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
 <noscript><style>
   .preloader{display:none!important}
   .rv{opacity:1!important;transform:none!important}
-  .scroll-progress,.dot-nav,.toast,.marquee-band{display:none!important}
+  .scroll-progress,.dot-nav,.toast{display:none!important}
   .reviews-track{flex-wrap:wrap}
   .review-slide{min-width:100%}
   .faq-a{max-height:none!important}
@@ -1525,34 +1549,10 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <div class="hero-scroll"><span class="hero-scroll-text">Scroll</span><div class="hero-scroll-line"></div></div>
 </section>
 
-<!-- MARQUEE TYPOGRAPHY BAND — NEW technique -->
-<div class="marquee-band" aria-hidden="true">
-  <div class="marquee-inner">
-    <span class="marquee-item">A Story on Every Plate</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Cuisine Fran&ccedil;aise</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Farm to Table</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Fine Dining, Hannam</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Seasonal Ingredients</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">L'Art de Vivre</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">A Story on Every Plate</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Cuisine Fran&ccedil;aise</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Farm to Table</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Fine Dining, Hannam</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Seasonal Ingredients</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">L'Art de Vivre</span>
-    <span class="marquee-sep">&middot;</span>
-  </div>
+<!-- PULL QUOTE — NEW technique (에디토리얼 풀폭 인용구) -->
+<div class="pull-quote">
+  <p class="pull-quote-text">&ldquo;좋은 재료를 찾아 산지를 직접 걸으며,<br>그 계절에만 가능한 맛을 접시 위에 담습니다.&rdquo;</p>
+  <cite class="pull-quote-cite">박준서 &mdash; Head Chef, Founder</cite>
 </div>
 
 <!-- PHOTO BAND 1 -->
@@ -1698,35 +1698,6 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   </div>
 </section>
 
-<!-- SIGNATURE DISH BAND -->
-<div class="marquee-band" aria-hidden="true" style="border-top:none">
-  <div class="marquee-inner" style="animation-direction:reverse">
-    <span class="marquee-item">Tartare de Yellowtail</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Velout&eacute; de Matsutake</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Hanwoo Beef Sous Vide</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Fondant au Chocolat Valrhona</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Dorade Meuni&egrave;re</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Granit&eacute; au Hallabong</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Tartare de Yellowtail</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Velout&eacute; de Matsutake</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Hanwoo Beef Sous Vide</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Fondant au Chocolat Valrhona</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Dorade Meuni&egrave;re</span>
-    <span class="marquee-sep">&middot;</span>
-    <span class="marquee-item">Granit&eacute; au Hallabong</span>
-    <span class="marquee-sep">&middot;</span>
-  </div>
-</div>
 
 <!-- GALLERY -->
 <section class="section rv" id="gallery">
@@ -1809,7 +1780,7 @@ button{border:none;background:none;cursor:pointer;font-family:inherit;color:inhe
   <h2 class="sec-heading">셰프 소개</h2>
 
   <div class="chef-philosophy rv">
-    <blockquote>&ldquo;좋은 재료를 찾아 산지를 직접 걸으며,<br>그 계절에만 가능한 맛을 접시 위에 담습니다.&rdquo;</blockquote>
+    <blockquote>&ldquo;열 가지 기교보다 한 가지 재료의 진심이<br>게스트의 기억에 더 오래 남습니다.&rdquo;</blockquote>
     <cite>— 박준서, Head Chef</cite>
   </div>
 
@@ -2435,6 +2406,24 @@ document.addEventListener('visibilitychange', function() {
     revReset();
   }
 });
+
+/* ============================================================
+   PULL QUOTE — 스크롤 트리거 (페이드인 + 스케일)
+   ============================================================ */
+var pullQuoteText = document.querySelector('.pull-quote-text');
+var pullQuoteCite = document.querySelector('.pull-quote-cite');
+if (pullQuoteText) {
+  var pqObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('show');
+        if (pullQuoteCite) pullQuoteCite.classList.add('show');
+        pqObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: .25 });
+  pqObs.observe(pullQuoteText);
+}
 
 /* ============================================================
    COUNTER ANIMATION — 숫자 카운트업 (뷰포트 진입 시)
